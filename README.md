@@ -26,6 +26,11 @@ Install webpack & webpack-cli
 npm i webpack webpack-cli -D
 ```
 
+Insall firebase
+```
+npm install firebase
+```
+
 # Building
 
 # Prerequisites
