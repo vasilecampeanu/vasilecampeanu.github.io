@@ -1,0 +1,6 @@
+{{/*  Internal  */}}
+{{/*  Get Resources  */}}
+{{ $bundle := resources.Get "js/dist/bundle.js"  }}
+
+{{/*  Include script  */}}
+<script src="{{ $bundle.RelPermalink }}" ></script>

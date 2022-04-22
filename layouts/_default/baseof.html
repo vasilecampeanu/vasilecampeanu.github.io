@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+    {{ partial "components/head/head.html" . }}
+</head>
+<body>
+    <div class="site-wrapper">
+        <header id="header">
+            {{ block "header" . }}{{ end }}
+        </header>
+        <main id="main">
+            {{ block "main" . }}{{ end }}
+        </main>
+        <footer id="footer">
+            {{ block "footer" . }}{{ end }}
+        </footer>
+    </div>
+    {{ partial "components/footer/include.html" . }}
+</body>
+</html>

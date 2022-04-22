@@ -15,7 +15,7 @@
   \*******************************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://vasilecampeanu.github.io/./assets/js/src/main.js?");
+eval("console.log(\"Hello world!\");\n\n//# sourceURL=webpack://vasilecampeanu.github.io/./assets/js/src/main.js?");
 
 /***/ })
 
