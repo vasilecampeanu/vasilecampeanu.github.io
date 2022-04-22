@@ -1,0 +1,25 @@
+{
+    "name": "vasilecampeanu.github.io",
+    "version": "1.0.0",
+    "description": "I know that is uncommon to find content creators who choose to have their content on personal blogs/websites. Usually, a go-to solution would be to use a CMS (Content Management System) like [WordPress](https://wordpress.com) or [Wix](https://www.wix.com).",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vasilecampeanu/vasilecampeanu.github.io.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/vasilecampeanu/vasilecampeanu.github.io/issues"
+    },
+    "homepage": "https://github.com/vasilecampeanu/vasilecampeanu.github.io#readme",
+    "devDependencies": {
+        "webpack": "^5.72.0",
+        "webpack-cli": "^4.9.2"
+    }
+}

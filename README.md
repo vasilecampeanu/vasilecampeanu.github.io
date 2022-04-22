@@ -14,11 +14,23 @@ To create a new site with hugo run the following command:
 hugo new site site_name
 ```
 
+## Node.js
+
+Init nodejs
+```
+npm init -y
+```
+
+Install webpack & webpack-cli
+```
+npm i webpack webpack-cli -D
+```
+
 # Building
 
 # Prerequisites
 - Hugo
 - Firebase
-- Nodejs
+- Node.js
 
 # Build system generation
