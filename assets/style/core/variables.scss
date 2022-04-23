@@ -1,0 +1,72 @@
+// Setup custom fonts
+// Virgil
+@font-face
+{
+    font-family: "Virgil";
+    src: url("https://excalidraw.com/Virgil.woff2");
+}
+
+// Cascadia
+@font-face
+{
+    font-family: "Cascadia";
+    src: url("https://excalidraw.com/Cascadia.woff2");
+}
+
+// Theme variables
+// Light theme variables
+:root
+{
+    --background-primary: #ffffff;
+    --background-secondary-01: #ffffff;
+    --background-secondary-02: #ffffff;
+    --text-normal: #ffffff;
+    --text-accent: #4C6EF5;
+    --text-accent-hover: #F5D34C;
+    --border-color: #25282e;
+    --article-description-color: #b6bfcb;
+    --border-bottom-to-hover: rgb(255, 255, 255, 0);
+    --border-bottom-hovered: rgb(255, 255, 255, 1);
+}
+
+// Dark theme variables
+[saved-theme="dark"]
+{
+    --background-primary: #0E141B;
+    --background-secondary-01: rgb(27, 32, 37);
+    --background-secondary-02: #363C43;
+    --text-normal: #ffffff;
+    --text-accent: #4C6EF5;
+    --text-accent-hover: #F5D34C;
+    --border-color: #25282e;
+    --article-description-color: #b6bfcb;
+    --border-bottom-to-hover: rgb(255, 255, 255, 0);
+    --border-bottom-hovered: rgb(255, 255, 255, 1);
+}
+
+// Typography
+:root
+{
+    // Default font
+    --default-font: "Cascadia";
+
+    // Sizes
+    --font-size-xxsm: 14px;
+    --font-size-xsm: 16px;
+    --font-size-sm: 18px;
+    --font-size-m: 20px;
+    --font-size-lg: 24px;
+    --font-size-xlg: 28px;
+    --font-size-xxlg: 32px;
+}
+
+// Transition
+:root
+{
+    --hover-transition: 0.3s;
+}
+
+// Shadow layouts
+:root
+{
+}

@@ -1,0 +1,43 @@
+body
+{
+    display: grid;
+    background-color: var(--background-primary);
+    font-family: var(--default-font);
+    color: var(--text-normal);
+}
+
+.site-wrapper
+{
+    justify-self: center;
+    
+    // Base grid layout
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: auto 1fr auto;
+    gap: 0rem;
+
+    width: 85%;
+    max-width: 1536px;
+    padding: 0px 20px;
+
+    // Loading & resize transitions
+    transition: opacity 0.5s ease-out, width .3s, transform .3s;
+
+    header
+    {
+        grid-area: header;
+    }
+
+    main
+    {
+        grid-area: main;
+    }
+
+    footer
+    {
+        grid-area: footer;
+    }
+}
