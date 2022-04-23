@@ -21,7 +21,15 @@
                 {{ partial "helper/icon" "search" }}
             </li>
             <li>
-                {{ partial "helper/icon" "moon" }}
+                <div class="theme-toggle">
+                    <input class="toggle" id="darkmode-toggle" type="checkbox" tabindex="-1">
+                    <label id="toggle-label-light" for="darkmode-toggle" tabindex="-1">
+                        {{ partial "helper/icon" "sun" }}
+                    </label>
+                    <label id="toggle-label-dark" for="darkmode-toggle" tabindex="-1">
+                        {{ partial "helper/icon" "moon" }}
+                    </label>
+                </div>
             </li>
             <li>
                 {{ partial "helper/icon" "languages" }}
