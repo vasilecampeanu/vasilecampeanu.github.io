@@ -1,0 +1,106 @@
+// Desktop navigation bar
+header nav.navbar.desktop
+{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+
+    height: 80px;
+
+    .logo
+    {
+        align-self: center;
+        
+        a
+        {
+            padding: 10px 0px;
+            text-decoration: none;
+            color: var(--text-normal);
+            font-size: var(--font-size-xlg);
+            font-weight: bold;
+            align-self: center;
+            span
+            {
+                color: var(--text-accent);
+            }
+        }
+    }
+
+    .links
+    {
+        align-self: center;
+        justify-self: end;
+
+        ul
+        {
+            display: flex;
+
+            li
+            {
+                list-style: none;
+                display: inline-flex;
+                margin-left: 15px;
+                a
+                {
+                    display: inline-flex;
+                    align-self: center;
+                    font-weight: bolder;
+                    text-decoration: none;
+                    color: var(--text-normal);
+                    font-size: var(--font-size-xsm);
+                    text-transform: uppercase;
+                    transition: all var(--hover-transition);
+
+                    svg
+                    {
+                        height: 1.1em;
+                        width: 1.1em;
+                        top: .125em;
+                        position: relative;
+                        stroke-width: 3;
+                    }
+
+                    p
+                    {
+                        margin-left: 5px;
+                    }
+
+                    &.active
+                    {
+                        color: var(--text-accent);
+                    }
+
+                    &:hover
+                    {
+                        color: var(--text-accent-hover);
+                    }
+                }
+            }
+        }
+    }
+
+    .actions
+    {
+        align-self: center;
+        padding-left: 20px;
+        ul
+        {
+            display: flex;
+
+            li
+            {
+                list-style: none;
+                cursor: pointer;
+                padding-left: 10px;
+                svg
+                {
+                    stroke-width: 3;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px)
+    {
+        display: none;
+    }
+}

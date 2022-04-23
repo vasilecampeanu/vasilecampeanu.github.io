@@ -1,5 +1,68 @@
 {
     "baseURL": "http://vasilecampeanu.github.io/",
     "languageCode": "en-us",
-    "title": "Vasile Câmpeanu's Porfolio & Blog"
+    "title": "Vasile Câmpeanu's Porfolio & Blog",
+    "defaultContentLanguage": "en",
+    "languages":
+    {
+        "en": 
+        {
+            "languageName": "English",
+            "languageIcon": null,
+            "weight": 1,
+            "menu": 
+            {
+                "main":
+                [
+                    {
+                        "identifier": "home",
+                        "name": "Home",
+                        "url": "/",
+                        "weight": 1,
+                        "params": 
+                        {
+                            "icon": "home"
+                        }
+                    },
+                    {
+                        "identifier": "about",
+                        "name": "About",
+                        "url": "/about/",
+                        "weight": 2,
+                        "params": 
+                        {
+                            "icon": "user"
+                        }
+                    },
+                    {
+                        "identifier": "blog",
+                        "name": "Blog",
+                        "url": "/blog/",
+                        "weight": 2,
+                        "params": 
+                        {
+                            "icon": "package"
+                        }
+                    },
+                    {
+                        "identifier": "newsletter",
+                        "name": "Newsletter",
+                        "url": "/newsletter/",
+                        "weight": 2,
+                        "params": 
+                        {
+                            "icon": "mail"
+                        }
+                    }
+                ]
+            }
+        },
+        "ro":
+        {
+            "languageName": "Romanian",
+            "languageIcon": null,
+            "weight": 2,
+            "menu": {}
+        }
+    }
 }

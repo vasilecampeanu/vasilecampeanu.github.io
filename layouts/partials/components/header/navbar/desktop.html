@@ -1,0 +1,31 @@
+<nav class="navbar desktop">
+    <div class="logo">
+        <a href="/">Vasile <span>Câmpeanu</span></a>
+    </div>
+    <div class="links">
+        <ul>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+                {{ $menu_item_url := .URL | relLangURL }}
+                {{ $page_url := $currentPage.RelPermalink | relLangURL }}
+                {{ $icon := .Params.Icon }}
+                <li>
+                    <a class="{{ if eq $menu_item_url $page_url }}active{{ end }}" href="{{ .URL | relLangURL }}">{{ partial "helper/icon" $icon }}<p>{{ .Name }}</p></a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+    <div class="actions">
+        <ul>
+            <li>
+                {{ partial "helper/icon" "search" }}
+            </li>
+            <li>
+                {{ partial "helper/icon" "moon" }}
+            </li>
+            <li>
+                {{ partial "helper/icon" "languages" }}
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,9 @@
+// Mobile navigation bar
+header nav.navbar.mobile
+{
+    display: none;
+    @media screen and (max-width: 1024px)
+    {
+        display: block;
+    }
+}

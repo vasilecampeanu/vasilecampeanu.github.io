@@ -9,7 +9,7 @@
 <body id="body">
     <div id="global-wrapper" class="site-wrapper">
         <header id="header">
-            {{ block "header" . }}{{ end }}
+            {{ partial "components/header/header.html" . }}
         </header>
         <main id="main">
             {{ block "main" . }}{{ end }}
