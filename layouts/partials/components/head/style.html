@@ -1,3 +1,8 @@
+{{/*  Get resource location.  */}}
 {{ $sass  := resources.Get "style/style.scss" }}
+
+{{/*  Compile and minify scss.  */}}
 {{ $style := $sass | resources.ToCSS | minify | resources.Fingerprint "sha256" }}
+
+{{/*  Link resource to our page.  */}}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">

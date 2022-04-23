@@ -31,6 +31,21 @@ Insall firebase
 npm install firebase
 ```
 
+# Git
+I decided to use "conventional commits" to better understand past updates.
+Commit structure: type[scope]: description
+
+Types used:
+- feat
+- docs
+
+Scope:
+- revision
+- style
+- layouts
+- config
+- firebase
+
 # Building
 
 # Prerequisites
