@@ -1,3 +1,6 @@
+{{/*  Helper partial.  */}}
+{{/*  Used for svg icons.  */}}
+
 {{ $iconFile := resources.GetMatch (printf "icons/%s.svg" .) }}
 {{ if $iconFile }}
     {{ $iconFile.Content | safeHTML }}

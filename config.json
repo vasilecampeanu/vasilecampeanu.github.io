@@ -45,9 +45,9 @@
                         }
                     },
                     {
-                        "identifier": "newsletter",
-                        "name": "Newsletter",
-                        "url": "/newsletter/",
+                        "identifier": "news",
+                        "name": "News",
+                        "url": "/news/",
                         "weight": 2,
                         "params": 
                         {
