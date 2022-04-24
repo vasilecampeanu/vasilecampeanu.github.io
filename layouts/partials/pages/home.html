@@ -32,4 +32,26 @@
             </div>
         </div>
     </div>
+    <div class="blog-posts">
+        {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.posts }}
+        {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+        {{ $filtered := ($pages | intersect $notHidden) }}
+        
+        <div class="recently-published">
+            <div class="title">RECENTLY PUBLISHED</div>
+            <div class="post-list">
+                {{ range $index, $element := $filtered }}
+                    {{ partial "article/compact.html" . }}
+                {{ end }}
+            </div>
+        </div>
+        <aside class="sidebar">
+            <div class="popular-content">
+                <div class="title">
+                </div>
+                <div class="post-list">
+                </div>
+            </div>
+        </aside>
+    </div>
 </div>
