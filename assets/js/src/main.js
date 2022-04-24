@@ -30,13 +30,13 @@ getDocs(colRef).then((snapshot) => {
     console.log(tests);
 }).catch(err => {
     console.log(err.message);
-})
+});
 
 // ------------
 // Theme script
 // ------------
-const userPref = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
-const currentTheme = localStorage.getItem('theme') ?? userPref
+const userPref = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+const currentTheme = localStorage.getItem('theme') ?? userPref;
 
 if (currentTheme)
 {
@@ -46,25 +46,25 @@ if (currentTheme)
 const switchTheme = (e) => {
     if (e.target.checked) 
     {
-        document.documentElement.setAttribute('saved-theme', 'dark')
-        localStorage.setItem('theme', 'dark')
+        document.documentElement.setAttribute('saved-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
     } 
     else 
     {
-        document.documentElement.setAttribute('saved-theme', 'light')
-        localStorage.setItem('theme', 'light')
+        document.documentElement.setAttribute('saved-theme', 'light');
+        localStorage.setItem('theme', 'light');
     }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
     // Darkmode toggle
-    const toggleSwitch = document.querySelector('#darkmode-toggle')
+    const toggleSwitch = document.querySelector('#darkmode-toggle');
 
     // listen for toggle
-    toggleSwitch.addEventListener('change', switchTheme, false)
+    toggleSwitch.addEventListener('change', switchTheme, false);
 
     if (currentTheme === 'dark') 
     {
-        toggleSwitch.checked = true
+        toggleSwitch.checked = true;
     }
-})
+});

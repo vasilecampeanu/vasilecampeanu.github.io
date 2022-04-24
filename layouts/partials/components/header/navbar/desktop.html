@@ -32,7 +32,19 @@
                 </div>
             </li>
             <li>
-                {{ partial "helper/icon" "languages" }}
+                <div class="dropdown-language">
+                    <button>
+                        {{ partial "helper/icon" "languages" }}
+                    </button>
+                    <div id="dropdown-language-content" class="dropdown-content">
+                        {{ $lang := .Lang}}
+                        {{ with $.Site.Home.AllTranslations }}
+                            {{ range . }}
+                                <a href="{{ .Permalink }}">{{ partial "helper/icon" "languages" }}{{ .Lang | title }}</a>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
             </li>
             <li class="togle-navbar-mobile">
                 <div class="burger-menu">
@@ -48,3 +60,29 @@
         </ul>
     </div>
 </nav>
+
+<script>
+// Language switch
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) 
+    {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        
+        for (var i = 0; i < dropdowns.length; i++) 
+        {
+            var openDropdown = dropdowns[i];
+            
+            if (openDropdown.classList.contains('show')) 
+            {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+function dropDownFunction() 
+{
+    document.getElementById("dropdown-language-content").classList.toggle("show");
+}
+</script>
