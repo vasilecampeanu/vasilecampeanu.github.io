@@ -112,6 +112,12 @@ main .main-wrapper.home
                         border: 1px solid var(--border-color);
                         background-color: var(--background-secondary-01);
                         color: var(--text-normal);
+
+                        @media screen and (max-width: 768px)
+                        {
+                            width: 100%;
+                        }
+
                         &:focus 
                         {
     
@@ -137,7 +143,13 @@ main .main-wrapper.home
                         color: white;
                         background-color: var(--text-accent);
                         transition: all var(--hover-transition);
-    
+                        
+                        @media screen and (max-width: 768px)
+                        {
+                            margin-top: 5px;
+                            width: 100%;
+                        }
+
                         &:hover
                         {
                             background-color: var(--text-accent-hover);
@@ -210,6 +222,10 @@ main .main-wrapper.home
                     align-self: end;
                     width: 90%;
                     height: 90%;
+                    @media screen and (max-width: 1024px)
+                    {
+                        width: 100%;
+                    }
                 }
 
                 &.item-2
@@ -218,7 +234,12 @@ main .main-wrapper.home
                     justify-self: start;
                     align-self: end;
                     width: 90%;
-                    height: 60%;   
+                    height: 60%;
+
+                    @media screen and (max-width: 1024px)
+                    {
+                        width: 100%;
+                    }
                 }
 
                 &.item-3
@@ -228,6 +249,11 @@ main .main-wrapper.home
                     align-self: start;
                     width: 90%;
                     height: 60%;
+
+                    @media screen and (max-width: 1024px)
+                    {
+                        width: 100%;
+                    }
                 }
 
                 &.item-4
@@ -237,6 +263,11 @@ main .main-wrapper.home
                     justify-self: start;
                     width: 90%;
                     height: 90%;
+
+                    @media screen and (max-width: 1024px)
+                    {
+                        width: 100%;
+                    }
                 }
             }
 

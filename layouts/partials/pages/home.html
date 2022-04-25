@@ -49,15 +49,23 @@
             <div class="title">RECENTLY PUBLISHED</div>
             <div class="post-list">
                 {{ range $index, $element := $filtered }}
-                    {{ partial "article/compact.html" . }}
+                {{ partial "article/compact.html" . }}
                 {{ end }}
             </div>
         </div>
         <aside class="sidebar">
             <div class="popular-content">
                 <div class="title">
+                    POPULAR CONTENT
                 </div>
                 <div class="post-list">
+                    <ul>
+                        {{ range $index, $element := $filtered }}
+                        <li>
+                            <a href=""><span>{{ partial "helper/icon" "arrow-right" }}</span><p>{{ .Title }}</p></a>
+                        </li>
+                        {{ end }}
+                    </ul>
                 </div>
             </div>
         </aside>
