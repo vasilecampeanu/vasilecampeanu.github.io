@@ -2,6 +2,27 @@
     <article class="post-single">
         <header class="post-header">
             {{ partial "components/breadcrumbs.html" . }}
+            <div class="post-title">
+                {{ .Title }}
+                {{ if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{ end }}
+            </div>
+            {{- if .Description }}
+                <div class="post-description">
+                    {{ .Description }}
+                </div>
+            {{- end }}
         </header>
+        {{ if .Content }}
+            <div class="post-content">
+                {{ if not (.Param "disableAnchoredHeadings") }}
+                    {{ partial "components/anchored_headings.html" .Content }}
+                {{ else }}
+                    {{ .Content }}
+                {{ end }}
+            </div>
+        {{ end }}
     </article>
+    <aside>
+        Table Of Content
+    </aside>
 </div>
