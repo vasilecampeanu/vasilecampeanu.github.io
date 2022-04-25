@@ -1,3 +1,50 @@
+// --------------------------------------------------------------------------------------------
+// Global variables
+// --------------------------------------------------------------------------------------------
+
+const loadin_animation = document.getElementById("loading-animation");
+const loader  = document.querySelector(".loader");
+const wrapper = document.querySelector(".site-wrapper");
+const body    = document.getElementById("body");
+
+// ---------------
+// Loading switch
+// ---------------
+window.onload = function () {
+    var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart; 
+    
+    console.log('Page load time was '+ loadTime);
+    
+    if(loadTime < 500)
+    {
+        loadTime = 0;
+    }
+
+    (function () {
+        wrapper.style.display = 'grid';
+        body.classList.add("hide-overflow");
+        
+        setTimeout(() => {
+            loader.style.opacity  = 0;
+            loader.style.display  = 'none';
+            loadin_animation.remove();
+            setTimeout(() => (wrapper.style.opacity = 1), 50);
+        }, loadTime);
+
+        setTimeout(() => (body.classList.remove("hide-overflow")), loadTime);
+        
+        // Set timeout for tartup modal
+        // setTimeout(() => (
+        //     $('#modal-container').removeAttr('class').addClass('one'),
+        //     $('body').addClass('modal-active')
+        // ), loadTime + 1000);
+    }());
+}
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
+
 // ------------
 // Theme script
 // ------------
@@ -38,6 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // ---------------
 // Language switch
 // ---------------
+
 // Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) 

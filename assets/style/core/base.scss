@@ -25,6 +25,8 @@ body
 
     // Loading & resize transitions
     transition: opacity 0.5s ease-out, width .3s, transform .3s;
+    opacity: 0;
+    display: none
 
     header
     {
@@ -45,4 +47,19 @@ body
     {
         width: 100%;
     }
+}
+
+// Loading animation
+.loader
+{
+    display: grid;
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.loader lottie-player
+{
+    justify-self: center;
+    align-self: center;
 }
