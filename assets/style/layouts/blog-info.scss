@@ -29,6 +29,7 @@ main .main-wrapper.home
                 article
                 {
                     margin-bottom: 20px;
+                    
                     .article-compact
                     {
                         a
@@ -52,13 +53,25 @@ main .main-wrapper.home
                                 {
                                     margin-bottom: 10px;
                                 }
+
                                 span
                                 {
                                     font-weight: bold;
                                     color: var(--text-normal);
-                                    &:hover
+                                    display: inline-flex;
+                                    
+                                    svg
                                     {
-                                        text-decoration: underline;
+                                        color: var(--text-accent);
+                                        margin-left: 2.5px;
+                                        opacity: 0;
+                                        transition: all var(--hover-transition);
+                                        stroke-width: 3;
+                                    }
+
+                                    &:hover svg
+                                    {
+                                        transform: translateX(7.5px);
                                     }
                                 }
                             }
@@ -67,14 +80,62 @@ main .main-wrapper.home
                             {
                                 color: var(--text-accent);
                             }
+
+                            &:hover .article-description span svg
+                            {
+                                opacity: 1;
+                            }
                         }
                     }
                 }
             }
         }
+        .categoriesCloud
+        {
+            margin-bottom: 40px;
 
+            .widget-icon
+            {
+                color: #FF0878;
+            }
+
+            .title
+            {
+                color: #FF0878;
+                font-weight: bold;
+                font-size: var(--font-size-lg);
+                margin-bottom: 30px;
+                
+            }
+
+            .categoriesCloud-categories
+            {
+                a
+                {
+                    background-color: var(--text-accent);
+                    border: 1px solid var(--border-color);
+                    border-radius: 10px;
+                    color: white;
+                    padding: 2.5px 10px;
+                    text-decoration: none;
+                    margin-left: 5px;
+                    margin-bottom: 5px;
+                    display: inline-block;
+                    font-weight: bold;
+
+                    &:hover
+                    {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
         .popular-content
         {
+            .widget-icon
+            {
+                color: #FF0878;
+            }
             .title
             {
                 color: #FF0878;

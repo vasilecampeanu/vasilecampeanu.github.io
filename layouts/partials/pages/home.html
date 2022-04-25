@@ -49,12 +49,45 @@
             <div class="title">RECENTLY PUBLISHED</div>
             <div class="post-list">
                 {{ range $index, $element := $filtered }}
-                {{ partial "article/compact.html" . }}
+                    {{ partial "article/compact.html" . }}
                 {{ end }}
             </div>
         </div>
         <aside class="sidebar">
+            <div class="categoriesCloud">
+                <div class="widget-icon">
+                    {{ partial "helper/icon" "categories" }}
+                </div>
+                <div class="title">CATEGORIES</div>
+                <div class="categoriesCloud-categories">
+                    {{ $context := . }}
+                    {{ $limit := 10  }}
+                    {{ range first $limit $context.Site.Taxonomies.categories.ByCount }}
+                        <a href="{{ .Page.RelPermalink }}" class="font_size_{{ .Count }}">
+                            {{ .Page.Title }}
+                        </a>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="categoriesCloud">
+                <div class="widget-icon">
+                    {{ partial "helper/icon" "tag" }}
+                </div>
+                <div class="title">TAGS</div>
+                <div class="categoriesCloud-categories">
+                    {{ $context := . }}
+                    {{ $limit := 10  }}
+                    {{ range first $limit $context.Site.Taxonomies.tags.ByCount }}
+                        <a href="{{ .Page.RelPermalink }}" class="font_size_{{ .Count }}">
+                            {{ .Page.Title }}
+                        </a>
+                    {{ end }}
+                </div>
+            </div>
             <div class="popular-content">
+                <div class="widget-icon">
+                    {{ partial "helper/icon" "award" }}
+                </div>
                 <div class="title">
                     POPULAR CONTENT
                 </div>
