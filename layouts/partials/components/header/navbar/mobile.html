@@ -1,2 +1,15 @@
 <nav class="navbar mobile">
+    <div id="mobile-navbar" class="links">
+        <ul>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+                {{ $menu_item_url := .URL | relLangURL }}
+                {{ $page_url := $currentPage.RelPermalink | relLangURL }}
+                {{ $icon := .Params.Icon }}
+                <li>
+                    <a class="{{ if eq $menu_item_url $page_url }}active{{ end }}" href="{{ .URL | relLangURL }}">{{ partial "helper/icon" $icon }}<p>{{ .Name }}</p></a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
 </nav>

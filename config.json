@@ -62,7 +62,52 @@
             "languageName": "Romanian",
             "languageIcon": null,
             "weight": 2,
-            "menu": {}
+            "menu": 
+            {
+                "main":
+                [
+                    {
+                        "identifier": "home",
+                        "name": "Acasa",
+                        "url": "/",
+                        "weight": 1,
+                        "params":
+                        {
+                            "icon": "home"
+                        }
+                    },
+                    {
+                        "identifier": "about",
+                        "name": "Despre",
+                        "url": "/about/",
+                        "weight": 2,
+                        "params": 
+                        {
+                            "icon": "user"
+                        }
+                    },
+                    {
+                        "identifier": "blog",
+                        "name": "Blog",
+                        "url": "/blog/",
+                        "weight": 2,
+                        "params": 
+                        {
+                            "icon": "package"
+                        }
+                    },
+                    {
+                        "identifier": "news",
+                        "name": "Noutati",
+                        "url": "/news/",
+                        "weight": 2,
+                        "params": 
+                        {
+                            "icon": "mail"
+                        }
+                    }
+                ]
+            }
         }
     },
     "params":

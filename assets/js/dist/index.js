@@ -108,3 +108,16 @@ function dropDownFunction()
 {
     document.getElementById("dropdown-language-content").classList.toggle("show");
 }
+
+// --------------------------------------------------------------------------------------------
+// Mobile navbar
+// --------------------------------------------------------------------------------------------
+
+var burger = document.getElementById('burger'),
+    nav    = document.getElementById('mobile-navbar');
+
+burger.addEventListener('click', function(e){
+    this.classList.toggle('is-open');
+    nav.classList.toggle('is-open');
+    body.classList.toggle('hide-overflow');
+});

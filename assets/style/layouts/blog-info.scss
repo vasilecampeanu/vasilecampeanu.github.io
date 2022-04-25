@@ -9,9 +9,10 @@ main .main-wrapper.home
         
         @media screen and (max-width: 1024px)
         {
-            margin-top: 4rem;
+            margin-top: 2rem;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
+            gap: 0;
         }
         
         .recently-published
@@ -21,7 +22,7 @@ main .main-wrapper.home
                 color: #FF0878;
                 font-weight: bold;
                 font-size: var(--font-size-lg);
-                margin-bottom: 30px;
+                margin-bottom: 2rem;
             }
 
             .post-list
@@ -92,7 +93,7 @@ main .main-wrapper.home
         }
         .categoriesCloud
         {
-            margin-bottom: 40px;
+            margin-bottom: 2rem;
 
             .widget-icon
             {
@@ -104,7 +105,7 @@ main .main-wrapper.home
                 color: #FF0878;
                 font-weight: bold;
                 font-size: var(--font-size-lg);
-                margin-bottom: 30px;
+                margin-bottom: 2rem;
                 
             }
 
@@ -136,12 +137,13 @@ main .main-wrapper.home
             {
                 color: #FF0878;
             }
+            
             .title
             {
                 color: #FF0878;
                 font-weight: bold;
                 font-size: var(--font-size-lg);
-                margin-bottom: 30px;
+                margin-bottom: 2rem;
             }
 
             .post-list
@@ -159,6 +161,7 @@ main .main-wrapper.home
                             text-decoration: none;
                             font-weight: bold;
                             color: var(--text-normal);
+                            
                             svg
                             {
                                 color: var(--text-accent);
