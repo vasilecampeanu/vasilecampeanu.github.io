@@ -14,21 +14,33 @@
             <div class="subscribe-action">
                 <p>Subscribe to my <a href="/news/">monthly newsletter</a> for updates.</p>
                 <form>
-                    <input type="email" placeholder="Eamil">
+                    <input type="email" placeholder="Email Address">
                     <input type="submit" value="SUBSCRIBE">
                 </form>
             </div>
         </div>
         <div class="animation">
+            {{ $meditationAnimation := resources.Get "json/meditationAnimation.json" }}
+            {{ $item01 := resources.Get "svg/artificial-neuron.svg" }}
+            {{ $item02 := resources.Get "svg/earth-cosmos-mapp.svg" }}
+            {{ $item03 := resources.Get "svg/earth-cosmos-mapp.svg" }}
+            {{ $item04 := resources.Get "svg/vitruvian-man.svg" }}
+
             <div class="item item-1">
+                {{ partial "helper/svg" "artificial-neuron" }}
             </div>
             <div class="item item-2">
+                {{ partial "helper/svg" "earth-cosmos-mapp" }}
             </div>
             <div class="center">
+                <lottie-player src="{{ $meditationAnimation.RelPermalink }}"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                <!-- Credit: https://lottiefiles.com/Mikhail_V94 -->
             </div>
             <div class="item item-3">
+                {{ partial "helper/svg" "earth-cosmos-mapp" }}
             </div>
             <div class="item item-4">
+                {{ partial "helper/svg" "vitruvian-man" }}
             </div>
         </div>
     </div>

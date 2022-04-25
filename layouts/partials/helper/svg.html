@@ -1,0 +1,9 @@
+{{/*  Helper partial.  */}}
+{{/*  Used for svg sketches.  */}}
+
+{{ $iconFile := resources.GetMatch (printf "svg/%s.svg" .) }}
+{{ if $iconFile }}
+    {{ $iconFile.Content | safeHTML }}
+{{ else }}
+    {{ errorf "Error: icon '%s.svg' is not found under 'assets/svg' folder" . }}
+{{ end }}
