@@ -112,7 +112,8 @@
     },
     "params":
     {
-        "posts": "blog/post/",
+        "posts": "blog/posts/",
+        "showBreadCrumbs": true,
         "widgets": 
         {
             "blogpage": 
