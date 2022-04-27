@@ -7,5 +7,10 @@
 {{/*  Styles  */}}
 {{ partial "components/head/style.html" . }}
 
+{{/*  Scripts  */}}
+{{/*  Highlight.js */}}
+{{ $highlight := slice (resources.Get "js/external/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" integrity="{{ $highlight.Data.Integrity }}" onload="hljs.initHighlightingOnLoad();"></script>
+
 {{/*  Page Title  */}}
 <title>Vasile Câmpeanu's Porfolio & Blog</title>
