@@ -49,14 +49,14 @@
     color: #b45ea4;
 }
 
-.hljs 
-{
-    display: block;
-    overflow-x: scroll;
-    background: #1c1d21;
-    color: #c0c5ce;
-    padding: .5em;
-}
+// .hljs 
+// {
+//     display: block;
+//     overflow-x: scroll;
+//     background: #1c1d21;
+//     color: #c0c5ce;
+//     padding: .5em;
+// }
 
 .hljs-emphasis
 {
@@ -99,15 +99,41 @@ pre, code
 {
     // width: calc(100vw * 80 / 100);
     display: grid;
-    background-color: red;
+    // background-color: red;
 }
 
 .highlight
 {
-        justify-self: center;
-        max-width: calc(100vw * (80 / 100)) !important;
-}
+    justify-self: center;
+    max-width: calc(100vw * (85 / 100)) !important;
+    width: calc(100vw * (85 / 100)) !important;
+    // min-width: 100vw !important;
     
+    @media screen and (max-width: 1220px)
+    {
+        max-width: calc(100vw - 40px) !important;      
+        width: calc(100vw - 40px) !important;      
+    }
+}
+
+.highlight
+{
+    background: #1c1d21 !important;
+    border-radius: 15px;
+    border: 2px solid var(--border-color);
+}
+
+.highlight div
+{
+    padding: 0px !important;
+    background: #1c1d21 !important;
+}
+
+.highlight::-webkit-scrollbar 
+{
+    display: none;
+}
+
 .highlight
 {
     display: inline-block;
@@ -121,6 +147,11 @@ pre, code
     overflow-x: scroll;
 }
 
+.highlight table::-webkit-scrollbar 
+{
+    display: none;
+}
+
 // div.highlight pre 
 // {
 //     white-space: pre-wrap;
@@ -131,4 +162,19 @@ pre, code
 {
     display: inline-block;
     overflow-x: scroll;
+}
+
+.language-html.hljs.xml::-webkit-scrollbar 
+{
+    display: none;
+}
+
+code::-webkit-scrollbar 
+{
+    display: none;
+}
+
+pre
+{
+    background: #1c1d21 !important;
 }
