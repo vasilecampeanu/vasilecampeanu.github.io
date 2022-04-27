@@ -116,8 +116,28 @@ function dropDownFunction()
 var burger = document.getElementById('burger'),
     nav    = document.getElementById('mobile-navbar');
 
-burger.addEventListener('click', function(e){
+burger.addEventListener('click', function(e) {
     this.classList.toggle('is-open');
     nav.classList.toggle('is-open');
     body.classList.toggle('hide-overflow');
 });
+
+// --------------------------------------------------------------------------------------------
+// Highlight blog link in post pages
+// --------------------------------------------------------------------------------------------
+
+const links = document.getElementsByTagName('a')
+const current_url = location.href;
+const post_page = "/post";
+
+console.log("Post page: " + current_url.includes(post_page));
+
+if (current_url.includes(post_page)) {
+    const blog_url = current_url.substring(0, current_url.lastIndexOf(post_page)) + '/';
+
+    for (const link of links) {
+        if (link.href === blog_url) {
+            link.classList.add('active')
+        }
+    }
+}

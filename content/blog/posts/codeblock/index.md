@@ -8,7 +8,7 @@ categories: ["themes", "syntax"]
 aliases: ["codeblock"]
 ---
 
-```html {linenos=true}
+```html
 <!DOCTYPE html>
 <html lang="en">
     <head>

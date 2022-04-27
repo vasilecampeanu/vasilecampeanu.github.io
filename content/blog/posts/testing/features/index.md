@@ -401,13 +401,7 @@ params:
 
 ### Comments
 
-to add comments, create a html file
-
-`layouts/partials/comments.html`
-
-and paste code provided by your comments provider
-
-also in config add this
+To add comments, create a html file `layouts/partials/comments.html` and paste code provided by your comments provider also in config add this.
 
 ```yml
 params:

@@ -125,13 +125,26 @@ main .main-wrapper.article
                 li
                 {
                     display: flexbox;
+                    
                     .highlight
                     {
                         justify-self: start;
                         margin-top: 20px;
                         width: 100% !important;
+                        margin: 10px 0px !important;
+                    }
+
+                    p
+                    {
+                        padding: 0px;
                     }
                 }
+            }
+            
+            hr
+            {
+                margin: 20px 0px;
+                border: 1px solid var(--border-color);
             }
 
             // Tables
@@ -160,6 +173,18 @@ main .main-wrapper.article
                 {
                     margin: auto 0;
                 }
+            }
+        }
+
+        a
+        {
+            color: var(--text-accent);
+            transition: all var(--hover-transition);
+            font-weight: bold;
+
+            &:hover
+            {
+                color: var(--text-accent-hover);
             }
         }
     }
