@@ -121,6 +121,17 @@ main .main-wrapper.article
             ul 
             {
                 padding-inline-start: 20px;
+                
+                li
+                {
+                    display: flexbox;
+                    .highlight
+                    {
+                        justify-self: start;
+                        margin-top: 20px;
+                        width: 100% !important;
+                    }
+                }
             }
 
             // Tables
@@ -128,7 +139,8 @@ main .main-wrapper.article
             {
                 justify-self: start;
                 margin-bottom: 32px;
-        
+                overflow-x: scroll;
+
                 th,
                 &:not(.highlighttable, .highlight table, .gist .highlight) td 
                 {
