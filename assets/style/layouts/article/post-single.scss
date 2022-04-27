@@ -11,8 +11,9 @@ main .main-wrapper.article
     }
 }
 
-.post-single
+.post-single *
 {
+    font-size: var(--font-size-sm);
 }
 
 .post-content
