@@ -1,8 +1,21 @@
 main .main-wrapper.article
 {
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    gap: 2rem;
+
+    @media screen and (max-width: 1024px)
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 }
 
 .post-single
 {
+}
+
+.post-content
+{
+    display: grid;
 }
