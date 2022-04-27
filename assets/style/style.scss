@@ -3,11 +3,6 @@
 @import "./core/variables.scss";
 @import "./core/base.scss";
 
-// Layouts
-@import "./layouts/home.scss";
-
-@import "./layouts/article/article.scss";
-
 // Partials
 // Header section
 @import "./partials/header.scss";
@@ -17,5 +12,10 @@
 
 // Helpers
 @import "./partials/underConstruction.scss";
-@import "./partials/highlight.scss";
 @import "./partials/syntax.scss";
+@import "./partials/highlight.scss";
+
+// Layouts
+@import "./layouts/home.scss";
+
+@import "./layouts/article/article.scss";
