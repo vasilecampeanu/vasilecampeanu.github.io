@@ -38,17 +38,27 @@
                         "identifier": "blog",
                         "name": "Blog",
                         "url": "/blog/",
-                        "weight": 2,
+                        "weight": 3,
                         "params": 
                         {
                             "icon": "package"
                         }
                     },
                     {
+                        "identifier": "notes",
+                        "name": "Notes",
+                        "url": "/notes/",
+                        "weight": 4,
+                        "params": 
+                        {
+                            "icon": "pen-tool"
+                        }
+                    },
+                    {
                         "identifier": "news",
                         "name": "News",
                         "url": "/news/",
-                        "weight": 2,
+                        "weight": 5,
                         "params": 
                         {
                             "icon": "mail"
