@@ -6,6 +6,11 @@ body
     color: var(--text-normal);
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 .site-wrapper
 {
     justify-self: center;

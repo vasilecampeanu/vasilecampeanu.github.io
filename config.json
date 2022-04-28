@@ -114,7 +114,7 @@
     {
         "posts": "blog/posts/",
         "showBreadCrumbs": true,
-        "widgets": 
+        "widgets":
         {
             "blogpage": 
             [
@@ -143,6 +143,12 @@
             "noClasses": false,
             "pygmentsUseClasses" : true,
             "pygmentsCodefences": true
+        },
+        "tableOfContents":
+        {
+            "startLevel": 0,
+            "endLevel": 6,
+            "ordered": false
         }
     }
 }
