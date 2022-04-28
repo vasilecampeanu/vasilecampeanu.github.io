@@ -3,9 +3,11 @@
 
 {{/*  Internal  */}}
 {{/*  Get Resources  */}}
-{{ $bundle := resources.Get "js/dist/bundle.js"  }}
-{{ $index  := resources.Get "js/dist/index.js"   }}
+{{ $bundle := resources.Get "js/dist/bundle.js" }}
+{{ $tcbot  := resources.Get "js/dist/tocbot.min.js" }}
+{{ $index  := resources.Get "js/dist/index.js" }}
 
 {{/*  Include script  */}}
 <script src="{{ $bundle.RelPermalink }}" ></script>
+<script src="{{ $tcbot.RelPermalink  }}" ></script>
 <script src="{{ $index.RelPermalink  }}" ></script>

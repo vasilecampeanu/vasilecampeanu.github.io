@@ -148,3 +148,26 @@ if (current_url.includes(post_page)) {
 // Table of content
 // --------------------------------------------------------------------------------------------
 
+// Initialize tcbot
+tocbot.init({
+    // Where to render the table of contents.
+    tocSelector: '.table-of-contet',
+    
+    // Where to grab the headings to build the table of contents.
+    contentSelector: '.toc-content-selector',
+    
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    
+    // For headings inside relative or absolute positioned containers within content.
+    hasInnerContainers: true,
+
+    // Include the HTML markup from the heading node instead of just including the textContent.
+    includeHtml: true,
+
+    // Create unorder lists
+    orderedList: false,
+
+    // How many heading levels should not be collapsed.
+    collapseDepth: 2,
+});
