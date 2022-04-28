@@ -46,6 +46,9 @@
         {{ $filtered := ($pages | intersect $notHidden) }}
         
         <div class="recently-published">
+            <div class="widget-icon">
+                {{ partial "helper/icon" "clock" }}
+            </div>
             <div class="title">RECENTLY PUBLISHED</div>
             <div class="post-list">
                 {{ range $index, $element := $filtered }}
