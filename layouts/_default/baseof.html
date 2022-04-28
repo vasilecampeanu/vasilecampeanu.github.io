@@ -7,6 +7,7 @@
     {{ partial "components/head/head.html" . }}
 </head>
 <body id="body">
+    {{partial "components/search.html" .}}
     <div class="loader">
         {{ $loadingAnimation := resources.Get "json/loadingAnimation.json" }}
         <lottie-player id="loading-animation" src="{{ $loadingAnimation.RelPermalink }}" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
