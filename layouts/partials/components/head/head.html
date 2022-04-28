@@ -14,3 +14,25 @@
 
 {{/*  Page Title  */}}
 <title>Vasile Câmpeanu's Porfolio & Blog</title>
+
+{{/*  Preload page variables  */}}
+{{$linkIndex := resources.Get "indices/linkIndex.json" | resources.Fingerprint "md5" | resources.Minify |  }}
+{{$contentIndex := resources.Get "indices/contentIndex.json" | resources.Fingerprint "md5" | resources.Minify }}
+<script>
+  const BASE_URL = {{.Site.BaseURL}}
+  const fetchData = Promise.all([
+        fetch("{{ $linkIndex.Permalink }}")
+          .then(data => data.json())
+          .then(data => ({
+            index: data.index,
+            links: data.links,
+          })),
+        fetch("{{ $contentIndex.Permalink }}")
+          .then(data => data.json()),
+      ])
+      .then(([{index, links}, content]) => ({
+        index,
+        links,
+        content,
+      }))
+</script>
