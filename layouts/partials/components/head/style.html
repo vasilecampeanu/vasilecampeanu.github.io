@@ -4,5 +4,8 @@
 {{/*  Compile and minify scss.  */}}
 {{ $style := $sass | resources.ToCSS | minify | resources.Fingerprint "sha256" }}
 
+{{/*  Custom font stylesheet  */}}
+<link rel="stylesheet" href="{{ "/fonts/stylesheet.css" | absURL }}">
+
 {{/*  Link resource to our page.  */}}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">

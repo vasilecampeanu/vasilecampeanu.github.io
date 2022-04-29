@@ -33,6 +33,12 @@ footer
                     text-decoration: none;
                     color: var(--text-normal);
                     transition: var(--hover-transition);
+
+                    svg
+                    {
+                        stroke-width: 2;
+                    }
+
                     &:hover
                     {
                         color: var(--text-accent-hover);

@@ -18,6 +18,7 @@
 {{/*  Preload page variables  */}}
 {{$linkIndex := resources.Get "indices/linkIndex.json" | resources.Fingerprint "md5" | resources.Minify |  }}
 {{$contentIndex := resources.Get "indices/contentIndex.json" | resources.Fingerprint "md5" | resources.Minify }}
+
 <script>
   const BASE_URL = {{.Site.BaseURL}}
   const fetchData = Promise.all([
