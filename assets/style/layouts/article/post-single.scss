@@ -174,17 +174,18 @@ main .main-wrapper.article
                     margin: auto 0;
                 }
             }
-        }
 
-        a
-        {
-            color: var(--text-accent);
-            transition: all var(--hover-transition);
-            font-weight: bold;
-
-            &:hover
+            // Link style
+            a
             {
-                color: var(--text-accent-hover);
+                color: var(--text-accent);
+                transition: all var(--hover-transition);
+                font-weight: bold;
+    
+                &:hover
+                {
+                    color: var(--text-accent-hover);
+                }
             }
         }
     }
