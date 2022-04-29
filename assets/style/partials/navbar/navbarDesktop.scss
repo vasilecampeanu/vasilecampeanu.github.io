@@ -50,11 +50,12 @@ header nav.navbar.desktop
                 list-style: none;
                 display: inline-flex;
                 margin-left: 15px;
+
                 a
                 {
                     display: inline-flex;
                     align-self: center;
-                    font-weight: bolder;
+                    font-weight: bold !important;
                     text-decoration: none;
                     color: var(--text-normal);
                     font-size: var(--font-size-xsm);
@@ -63,11 +64,16 @@ header nav.navbar.desktop
 
                     svg
                     {
-                        // height: 1.1em;
-                        width: 1.15em;
-                        // top: .125em;
-                        // position: relative;
+                        height: 1em;
+                        width: 1em;
+                        align-self: center;
                         stroke-width: 3;
+
+                        &.mail-icon
+                        {
+                            height: 1.05em;
+                            width: 1.05em;
+                        }
                     }
 
                     p
