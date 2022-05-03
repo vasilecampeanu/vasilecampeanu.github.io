@@ -1,6 +1,6 @@
 <div id="search-container">
     <div id="search-space">
-        <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search" placeholder="Search for something...">
+        <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search" placeholder="Search for something..." maxlength="64">
         <div id="results-container">
         </div>
     </div>
@@ -15,7 +15,6 @@
         integrity="{{ .Data.Integrity }}" crossorigin="anonymous"
     {{ end }}
 {{ end }}
-
 
 {{ $searchJSFile := printf "%s.search.js" .Language.Lang }}
 {{ $searchJS := resources.Get "js/dist/search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Minify | resources.Fingerprint }}
