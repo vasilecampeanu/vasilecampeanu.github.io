@@ -6,6 +6,7 @@ weight: 2
 aliases: ["/papermod-features"]
 tags: ["PaperMod"]
 author: "Aditya Telange"
+description: "Hello, this is just a description."
 ---
 
 # Intro

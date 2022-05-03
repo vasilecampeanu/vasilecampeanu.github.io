@@ -107,11 +107,12 @@
         searchHits.forEach(function (page) {
             var url = page.href;
             var resultTitle = page.title;
+            var resultSection = page.section;
 
             const li = element(
                 `<button class="result-card" id="${url}">
                     <h3>${resultTitle}</h3>
-                    <p>${resultTitle}</p>
+                    <p>${resultSection}</p>
                  </button>`                
             );
             
