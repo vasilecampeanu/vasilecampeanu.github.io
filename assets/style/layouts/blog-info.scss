@@ -63,20 +63,26 @@ main .main-wrapper.home
                                 {
                                     font-weight: bold;
                                     color: var(--text-normal);
+                                    font-size: 11px;
                                     display: inline-flex;
-                                    
+                                    text-transform: uppercase;
+
                                     svg
                                     {
                                         color: var(--text-accent);
                                         margin-left: 2.5px;
                                         opacity: 0;
                                         transition: all var(--hover-transition);
-                                        stroke-width: 2;
+                                        stroke-width: 3;
+                                        height: 1.35em;
+                                        width:  1.35em;
+                                        align-self: center;
+                                        pointer-events: fill;
                                     }
 
                                     &:hover svg
                                     {
-                                        transform: translateX(7.5px);
+                                        transform: translateX(5.5px);
                                     }
                                 }
                             }
@@ -118,24 +124,26 @@ main .main-wrapper.home
             {
                 a
                 {
+                    display: inline-block;
+                    text-decoration: none;
                     background-color: var(--text-accent);
                     border: 1px solid var(--border-color);
-                    border-radius: 10px;
-                    color: white;
                     padding: 2.5px 10px;
-                    text-decoration: none;
-                    margin-left: 5px;
-                    margin-bottom: 5px;
-                    display: inline-block;
+                    color: white;
+                    border-radius: 5px;
                     font-weight: bold;
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                    transition: all var(--hover-transition);
 
                     &:hover
                     {
-                        text-decoration: underline;
+                        background-color: var(--text-accent-hover);
                     }
                 }
             }
         }
+
         .popular-content
         {
             .widget-icon
@@ -159,6 +167,7 @@ main .main-wrapper.home
                     {
                         list-style: none;
                         margin-bottom: 10px;
+
                         a
                         {
                             display: grid;
@@ -167,15 +176,26 @@ main .main-wrapper.home
                             font-weight: bold;
                             color: var(--text-normal);
                             
+                            span
+                            {
+                                padding-right: 5px;
+                                display: inline-flex;
+                            }
+
                             svg
                             {
                                 color: var(--text-accent);
                                 transition: all var(--hover-transition);
+                                pointer-events: fill;
+                                height: 1.15em;
+                                width: 1.15em;
+                                align-self: center;
+                                stroke-width: 3;
                             }
 
                             p
                             {
-                                padding-left: 10px;
+                                padding-left: 5px;
                             }
 
                             &:hover svg

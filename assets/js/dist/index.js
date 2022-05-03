@@ -33,7 +33,7 @@ window.onload = function () {
             setTimeout(() => (wrapper.style.opacity = 1), 50);
         }, loadTime);
 
-        setTimeout(() => (body.classList.remove("hide-overflow")), loadTime);
+        setTimeout(() => (body.classList.remove("hide-overflow")), loadTime + 50);
         
         // Set timeout for tartup modal
         // setTimeout(() => (
