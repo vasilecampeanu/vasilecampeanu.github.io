@@ -1,3 +1,5 @@
+"use strict";
+
 (async function () {
     const source  = document.getElementById("search-bar");
     const results = document.getElementById("results-container");
