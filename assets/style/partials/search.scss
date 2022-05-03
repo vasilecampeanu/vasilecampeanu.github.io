@@ -1,4 +1,5 @@
-#search-container {
+#search-container 
+{
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -10,17 +11,20 @@
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 
-    & > div {
+    & > div 
+    {
         width: 50%;
         margin-top: 15vh;
         margin-left: auto;
         margin-right: auto;
 
-        @media all and (max-width: 1200px) {
+        @media all and (max-width: 1200px) 
+        {
             width: 90%;
         }
 
-        & > * {
+        & > * 
+        {
             width: 100%;
             border-radius: 4px;
             background: var(--light);
@@ -28,7 +32,8 @@
             margin-bottom: 2em;
         }
 
-        & > input {
+        & > input 
+        {
             box-sizing: border-box;
             padding: 0.5em 1em;
             font-family: Inter, sans-serif;
@@ -36,13 +41,21 @@
             font-size: 1.1em;
             border: 1px solid var(--outlinegray);
 
-            &:focus {
+            &:focus 
+            {
                 outline: none;
             }
         }
+        
+        & > #results-container 
+        {
+            *
+            {
+                color: var(--text-normal) !important;
+            }
 
-        & > #results-container {
-            & > .result-card {
+            & > .result-card 
+            {
                 padding: 1em;
                 cursor: pointer;
                 transition: background 0.2s ease;
@@ -62,27 +75,32 @@
                 outline: none;
 
                 &:hover,
-                &:focus {
+                &:focus 
+                {
                     background: rgba(180, 180, 180, 0.15);
                 }
 
-                &:first-of-type {
+                &:first-of-type 
+                {
                     border-top-left-radius: 5px;
                     border-top-right-radius: 5px;
                 }
 
-                &:last-of-type {
+                &:last-of-type 
+                {
                     border-bottom-left-radius: 5px;
                     border-bottom-right-radius: 5px;
                     border-bottom: 1px solid var(--outlinegray);
                 }
 
                 & > h3,
-                & > p {
+                & > p 
+                {
                     margin: 0;
                 }
 
-                & .search-highlight {
+                & .search-highlight 
+                {
                     background-color: #afbfc966;
                     padding: 0.05em 0.2em;
                     border-radius: 3px;
