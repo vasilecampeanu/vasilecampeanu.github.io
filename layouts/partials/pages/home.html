@@ -50,53 +50,17 @@
             </div>
         </div>
         <aside class="sidebar">
-            <div class="categoriesCloud">
-                <div class="widget-icon">
-                    {{ partial "helper/icon" "categories" }}
-                </div>
-                <div class="title">CATEGORIES</div>
-                <div class="categoriesCloud-categories">
-                    {{ $context := . }}
-                    {{ $limit := 10  }}
-                    {{ range first $limit $context.Site.Taxonomies.categories.ByCount }}
-                        <a href="{{ .Page.RelPermalink }}" class="font_size_{{ .Count }}">
-                            {{ .Page.Title }}
-                        </a>
+            {{ $scope := "homepage" }}
+            {{ $context := . }}
+            {{ with (index $context.Site.Params.widgets $scope) }}
+                {{ range $widget := . }}
+                    {{ if templates.Exists (printf "partials/widget/%s.html" .type) }}
+                        {{ partial (printf "widget/%s" .type) (dict "Context" $context "Params" .params) }}
+                    {{ else }}
+                        {{ warnf "Widget %s not found" .type }}
                     {{ end }}
-                </div>
-            </div>
-            <div class="categoriesCloud">
-                <div class="widget-icon">
-                    {{ partial "helper/icon" "tag" }}
-                </div>
-                <div class="title">TAGS</div>
-                <div class="categoriesCloud-categories">
-                    {{ $context := . }}
-                    {{ $limit := 10  }}
-                    {{ range first $limit $context.Site.Taxonomies.tags.ByCount }}
-                        <a href="{{ .Page.RelPermalink }}" class="font_size_{{ .Count }}">
-                            {{ .Page.Title }}
-                        </a>
-                    {{ end }}
-                </div>
-            </div>
-            <div class="popular-content">
-                <div class="widget-icon">
-                    {{ partial "helper/icon" "award" }}
-                </div>
-                <div class="title">
-                    POPULAR CONTENT
-                </div>
-                <div class="post-list">
-                    <ul>
-                        {{ range $index, $element := $filtered }}
-                        <li>
-                            <a href=""><span>{{ partial "helper/icon" "arrow-right" }}</span><p>{{ .Title }}</p></a>
-                        </li>
-                        {{ end }}
-                    </ul>
-                </div>
-            </div>
+                {{ end }}
+            {{ end }}
         </aside>
     </div>
 </div>

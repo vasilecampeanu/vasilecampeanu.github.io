@@ -1,0 +1,26 @@
+{{ $context := .Context }}
+{{ $limit := default 10 .Params.limit }}
+
+{{ $pages := where $context.Site.RegularPages "Type" "in" $context.Site.Params.posts }}
+{{ $notHidden := where $context.Site.RegularPages "Params.hidden" "!=" true }}
+{{ $filtered := ($pages | intersect $notHidden) }}
+
+<section class="popular-content">
+    <div class="widget-icon">
+        {{ partial "helper/icon" "award" }}
+    </div>
+    <div class="title">
+        POPULAR CONTENT
+    </div>
+    <div class="post-list">
+        <ul>
+            {{ range $index, $element := $filtered }}
+                {{ if lt $index $limit }}
+                    <li>
+                        <a href="{{ .RelPermalink }}"><span>{{ partial "helper/icon" "arrow-right" }}</span><p>{{ .Title }}</p></a>
+                    </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+</section>
