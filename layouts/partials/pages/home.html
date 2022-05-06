@@ -50,17 +50,7 @@
             </div>
         </div>
         <aside class="sidebar">
-            {{ $scope := "homepage" }}
-            {{ $context := . }}
-            {{ with (index $context.Site.Params.widgets $scope) }}
-                {{ range $widget := . }}
-                    {{ if templates.Exists (printf "partials/widget/%s.html" .type) }}
-                        {{ partial (printf "widget/%s" .type) (dict "Context" $context "Params" .params) }}
-                    {{ else }}
-                        {{ warnf "Widget %s not found" .type }}
-                    {{ end }}
-                {{ end }}
-            {{ end }}
+            {{ partial "components/sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
         </aside>
     </div>
 </div>

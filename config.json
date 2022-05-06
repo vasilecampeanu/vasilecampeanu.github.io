@@ -136,7 +136,7 @@
         "showBreadCrumbs": true,
         "widgets":
         {
-            "homepage": 
+            "homepage":
             [
                 {
                     "type": "categories",
@@ -159,6 +159,23 @@
                         "limit": 10
                     }
                 }
+            ],
+            "blogpage":
+            [
+                {
+                    "type": "categories",
+                    "params": 
+                    {
+                        "limit": 10
+                    }
+                },
+                {
+                    "type": "tags",
+                    "params":
+                    {
+                        "limit": 10
+                    }
+                }
             ]
         }
     },
@@ -170,12 +187,6 @@
             "noClasses": false,
             "pygmentsUseClasses" : true,
             "pygmentsCodefences": true
-        },
-        "tableOfContents":
-        {
-            "startLevel": 0,
-            "endLevel": 6,
-            "ordered": false
         }
     }
 }
