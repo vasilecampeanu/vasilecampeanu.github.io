@@ -27,7 +27,7 @@
         {
             width: 100%;
             border-radius: 4px;
-            background: var(--light);
+            background: rgb(27, 32, 37);
             box-shadow: 0 14px 50px rgba(27, 33, 48, 0.12), 0 10px 30px rgba(27, 33, 48, 0.16);
             margin-bottom: 2em;
         }
@@ -37,9 +37,9 @@
             box-sizing: border-box;
             padding: 0.5em 1em;
             font-family: Inter, sans-serif;
-            color: var(--dark);
+            color: white;
             font-size: 1.1em;
-            border: 1px solid var(--outlinegray);
+            border: 2px solid var(--border-color);
 
             &:focus 
             {
@@ -51,7 +51,7 @@
         {
             *
             {
-                color: var(--text-normal) !important;
+                color: white;
             }
 
             & > .result-card 
@@ -59,7 +59,7 @@
                 padding: 1em;
                 cursor: pointer;
                 transition: background 0.2s ease;
-                border: 1px solid var(--outlinegray);
+                border: 2px solid var(--border-color);
                 border-bottom: none;
                 width: 100%;
 
@@ -71,7 +71,7 @@
                 overflow: visible;
                 text-transform: none;
                 text-align: left;
-                background: var(--light);
+                background: rgb(27, 32, 37);
                 outline: none;
 
                 &:hover,
@@ -90,7 +90,7 @@
                 {
                     border-bottom-left-radius: 5px;
                     border-bottom-right-radius: 5px;
-                    border-bottom: 1px solid var(--outlinegray);
+                    border-bottom: 2px solid var(--border-color);
                 }
 
                 & > h3,

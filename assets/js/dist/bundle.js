@@ -9,13 +9,13 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./assets/js/src/main.js":
-/*!*******************************!*\
-  !*** ./assets/js/src/main.js ***!
-  \*******************************/
+/***/ "./assets/js/src/index.js":
+/*!********************************!*\
+  !*** ./assets/js/src/index.js ***!
+  \********************************/
 /***/ (() => {
 
-eval("// TODO: Implement Newsletter functionality\n\n//# sourceURL=webpack://vasilecampeanu.github.io/./assets/js/src/main.js?");
+eval("// TODO: Implement newsletter functionality\n\n//# sourceURL=webpack://vasilecampeanu.github.io/./assets/js/src/index.js?");
 
 /***/ })
 
@@ -26,7 +26,7 @@ eval("// TODO: Implement Newsletter functionality\n\n//# sourceURL=webpack://vas
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./assets/js/src/main.js"]();
+/******/ 	__webpack_modules__["./assets/js/src/index.js"]();
 /******/ 	
 /******/ })()
 ;
