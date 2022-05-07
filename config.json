@@ -115,6 +115,11 @@
     {
         "posts": "blog/posts/",
         "showBreadCrumbs": true,
+        "defaultImage": null,
+        "article": 
+        {
+            "readingTime": true
+        },
         "widgets":
         {
             "homepage":

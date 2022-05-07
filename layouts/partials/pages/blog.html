@@ -10,7 +10,7 @@
         {{ $filtered := ($pages | intersect $notHidden) }}
         {{ $pag := .Paginate ($filtered) }}
         {{ range $index, $element := $pag.Pages }}
-            Hello
+            {{ partial "article/article-list/default" . }}
         {{ end }}
         {{ partial "helper/pagination.html" . }}
     </section>
