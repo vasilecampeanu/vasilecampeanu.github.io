@@ -5,6 +5,14 @@
         </aside>
     </div>
     <section class="article-list">
+        {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.posts }}
+        {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+        {{ $filtered := ($pages | intersect $notHidden) }}
+        {{ $pag := .Paginate ($filtered) }}
+        {{ range $index, $element := $pag.Pages }}
+            Hello
+        {{ end }}
+        {{ partial "helper/pagination.html" . }}
     </section>
     <div>
         <aside class="sidebar">

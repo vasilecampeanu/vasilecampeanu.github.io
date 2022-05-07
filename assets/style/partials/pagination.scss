@@ -1,0 +1,36 @@
+.pagination 
+{
+    display: flex;
+    box-shadow: var(--shadow-l1);
+    border-radius: 5px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    border: 2px solid var(--border-color);
+
+    margin-bottom: 20px;
+
+    .page-link 
+    {
+        background-color: var(--background-secondary-01);
+        cursor: pointer;
+        padding: 8px 32px;
+        display: inline-flex;
+        font-weight: bold;
+        border-right: 2px solid var(--border-color);
+        transition: all 500ms;
+        text-decoration: none;
+        color: var(--card-text-color-secondary);
+        font-size: var(--font-size-xxsm);
+
+        &.current 
+        {
+            box-shadow: var(--shadow-l1);
+        }
+
+        &:hover
+        {
+            // color: var(--text-accent-hover);
+            text-decoration: underline;
+        }
+    }
+}
