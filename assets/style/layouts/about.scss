@@ -1,3 +1,96 @@
 .main-wrapper.about
 {
+    display: grid;
+    grid-template-columns: 42.5% 1fr;
+    gap: 20px;
+    
+    @media screen and (max-width: 1024px)
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    aside
+    {
+        display: grid;
+        grid-template-rows: auto;
+        gap: 20px;
+
+        .intro
+        {
+            align-self: start;
+            background-color: var(--background-secondary-01);
+            padding: 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 15px;
+    
+            .icon
+            {
+                color: #FF0878;
+            }
+    
+            .title
+            {
+                font-size: var(--font-size-lg);
+                text-transform: uppercase;
+                color: #FF0878;
+                font-weight: bold;
+            }
+    
+            .info
+            {
+                ul
+                {
+                    li
+                    {
+                        list-style: none;
+                    }
+                }
+            }
+        }
+
+        .photos
+        {
+            align-self: start;
+            background-color: var(--background-secondary-01);
+            padding: 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 15px;
+    
+            .icon
+            {
+                color: #FF0878;
+            }
+    
+            .title
+            {
+                font-size: var(--font-size-lg);
+                text-transform: uppercase;
+                color: #FF0878;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .about-me
+    {
+        align-self: start;
+        background-color: var(--background-secondary-01);
+        padding: 15px;
+        border: 2px solid var(--border-color);
+        border-radius: 15px;
+
+        .icon
+        {
+            color: #FF0878;
+        }
+
+        .title
+        {
+            font-size: var(--font-size-lg);
+            text-transform: uppercase;
+            color: #FF0878;
+            font-weight: bold;
+        }
+    }
 }
