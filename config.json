@@ -140,7 +140,17 @@
                     }
                 }
             ],
-            "blogpage":
+            "blogpage-left":
+            [
+                {
+                    "type": "popular",
+                    "params": 
+                    {
+                        "limit": 10
+                    }
+                }
+            ],
+            "blogpage-right":
             [
                 {
                     "type": "categories",

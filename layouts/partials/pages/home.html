@@ -49,8 +49,9 @@
                 {{ end }}
             </div>
         </div>
+        
         <aside class="sidebar">
-            {{ partial "components/sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+            {{ partial "components/sidebar.html" (dict "Context" . "Scope" "homepage") }}
         </aside>
     </div>
 </div>

@@ -1,2 +1,14 @@
 <div class="main-wrapper blog">
+    <div>
+        <aside class="sidebar">
+            {{ partial "components/sidebar.html" (dict "Context" . "Scope" "blogpage-left") }}
+        </aside>
+    </div>
+    <section class="article-list">
+    </section>
+    <div>
+        <aside class="sidebar">
+            {{ partial "components/sidebar.html" (dict "Context" . "Scope" "blogpage-right") }}
+        </aside>
+    </div>
 </div>
