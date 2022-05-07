@@ -47,6 +47,7 @@ Scope:
 - firebase
 
 # Building
+- Test
 
 # Prerequisites
 - Hugo
