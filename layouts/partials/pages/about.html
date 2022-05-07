@@ -24,14 +24,25 @@
             <div class="title">
                 Photos
             </div>
+            <div class="list">
+                No photos to show.
+            </div>
+        </div>
+        <div class="life-events">
+            <div class="icon">
+                {{ partial "helper/icon" "categories" }}
+            </div>
+            <div class="title">
+                Life events
+            </div>
+            <div class="list">
+                No events to show.
+            </div>
         </div>
     </aside>
     <div class="about-me">
-        <div class="icon">
-            {{ partial "helper/icon" "categories" }}
-        </div>
-        <div class="title">
-            About
+        <div class="container">
+            {{ partial "balloon/layout.html" . }}
         </div>
     </div>
 </div>

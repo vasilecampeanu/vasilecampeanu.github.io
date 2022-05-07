@@ -12,17 +12,16 @@
 
     aside
     {
-        display: grid;
         grid-template-rows: auto;
         gap: 20px;
 
         .intro
         {
-            align-self: start;
             background-color: var(--background-secondary-01);
             padding: 15px;
             border: 2px solid var(--border-color);
-            border-radius: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
     
             .icon
             {
@@ -51,12 +50,34 @@
 
         .photos
         {
-            align-self: start;
             background-color: var(--background-secondary-01);
             padding: 15px;
             border: 2px solid var(--border-color);
-            border-radius: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+
+            .icon
+            {
+                color: #FF0878;
+            }
     
+            .title
+            {
+                font-size: var(--font-size-lg);
+                text-transform: uppercase;
+                color: #FF0878;
+                font-weight: bold;
+            }
+        }
+
+        .life-events
+        {
+            background-color: var(--background-secondary-01);
+            padding: 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 5px;
+            margin-bottom: 20px;
+
             .icon
             {
                 color: #FF0878;
@@ -74,23 +95,24 @@
 
     .about-me
     {
-        align-self: start;
-        background-color: var(--background-secondary-01);
-        padding: 15px;
-        border: 2px solid var(--border-color);
-        border-radius: 15px;
+        // align-self: start;
+        // background-color: var(--background-secondary-01);
+        // padding: 15px;
+        // border: 2px solid var(--border-color);
+        // border-radius: 5px;
 
-        .icon
-        {
-            color: #FF0878;
-        }
+        // .icon
+        // {
+        //     color: #FF0878;
+        // }
 
-        .title
-        {
-            font-size: var(--font-size-lg);
-            text-transform: uppercase;
-            color: #FF0878;
-            font-weight: bold;
-        }
+        // .title
+        // {
+        //     font-size: var(--font-size-lg);
+        //     text-transform: uppercase;
+        //     color: #FF0878;
+        //     font-weight: bold;
+        //     padding-bottom: 20px;
+        // }
     }
 }
