@@ -15,7 +15,7 @@
                     </li>
                     <li>
                         <span class="info-icon">{{ partial "helper/icon" "graduation-cap" }}</span>
-                        <p>Studies <span class="bold"><a href="https://www.umfst.ro/home.html">Computer Science at UMFST Târgu Mureș - Faculty of Engineering</a></span></p>
+                        <p>Studies <span class="bold">Computer Science at <a href="https://www.umfst.ro/home.html">UMFST Târgu Mureș - Faculty of Engineering</a></span></p>
                     </li>
                     <li>
                         <span class="info-icon">{{ partial "helper/icon" "map-pin" }}</span>
@@ -60,7 +60,18 @@
                 Life events
             </div>
             <div class="list">
-                No events to show.
+                <div class="rb-container">
+                    <ul class="rb">
+                        <li class="rb-item" ng-repeat="itembx">
+                            <div class="timestamp">
+                                September 14, 2020 <br> 8:00 AM
+                            </div>
+                            <div class="item-title"><span class="info-icon">{{ partial "helper/icon" "graduation-cap" }}</span><p>Started school at <a href="https://www.umfst.ro/home.html">UMFST Târgu Mureș - Faculty of Engineering</a></p></div>
+                        </li>
+                        <li class="rb-item-last" ng-repeat="itembx">
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="projects">
