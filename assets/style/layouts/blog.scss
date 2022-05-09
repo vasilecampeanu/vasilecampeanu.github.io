@@ -3,8 +3,8 @@ main .main-wrapper.blog
     display: grid;
     grid-template-areas: 
     "left_sidebar main_content right_sidebar";
-    gap: 1.5rem;
-    grid-template-columns: 25% 1fr 22.5%;
+    gap: 1rem;
+    grid-template-columns: 25% 1fr 25%;
 
     .sidebar
     {
