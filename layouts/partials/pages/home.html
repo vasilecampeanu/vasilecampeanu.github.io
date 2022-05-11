@@ -12,25 +12,38 @@
                 <p>I am passionate about <span>artificial inteligence</span>, <span>bioinformatics</span> and <span>single-cell genomics</span>. My biggest interest lays in understanding the biological world from a computational standpoint. <a href="/about/">(more about me...)</a></p>
             </div>
         </div>
-        <div class="animation">
-            {{ $meditationAnimation := resources.Get "json/meditationAnimation.json" }}
+        <!-- 
+            <div class="animation">
+                {{ $meditationAnimation := resources.Get "json/meditationAnimation.json" }}
 
-            <div class="item item-1">
-                {{ partial "helper/svg" "artificial-neuron" }}
-            </div>
-            <div class="item item-2">
-                {{ partial "helper/svg" "earth-cosmos-mapp" }}
-            </div>
-            <div class="center">
-                <lottie-player src="{{ $meditationAnimation.RelPermalink }}"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-                <!-- Credit: https://lottiefiles.com/Mikhail_V94 -->
-            </div>
-            <div class="item item-3">
-                {{ partial "helper/svg" "earth-cosmos-mapp" }}
-            </div>
-            <div class="item item-4">
-                {{ partial "helper/svg" "vitruvian-man" }}
-            </div>
+                <div class="item item-1">
+                    {{ partial "helper/svg" "artificial-neuron" }}
+                </div>
+                <div class="item item-2">
+                    {{ partial "helper/svg" "earth-cosmos-mapp" }}
+                </div>
+                <div class="center">
+                    <lottie-player src="{{ $meditationAnimation.RelPermalink }}"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                    Credit: https://lottiefiles.com/Mikhail_V94
+                </div>
+                <div class="item item-3">
+                    {{ partial "helper/svg" "earth-cosmos-mapp" }}
+                </div>
+                <div class="item item-4">
+                    {{ partial "helper/svg" "vitruvian-man" }}
+                </div>
+            </div> 
+        -->
+        <div id="container" class="character-interaction">
+            <canvas id="character-animation"></canvas>
+            <!-- The main Three.js file -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
+
+            <!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
+            <script src='https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
+    
+            {{ $character_interaction := resources.Get "js/dist/character-interaction.js" }}
+            <script src="{{ $character_interaction.RelPermalink }}" ></script>
         </div>
     </div>
     <div class="blog-posts">
