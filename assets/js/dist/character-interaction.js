@@ -1,3 +1,6 @@
+// Tutorial: https://tympanus.net/codrops/2019/10/14/how-to-create-an-interactive-3d-character-with-three-js/
+// TO CHECK: https://stackoverflow.com/questions/29884485/threejs-canvas-size-based-on-container
+
 // Maybe this should be asyncrom.
 // TODO: Check a better way to encapsulate this, maybe use classes.
 (function () {
@@ -8,12 +11,9 @@
         model,                              // Our character
         neck,                               // Reference to the neck bone in the skeleton
         waist,                              // Reference to the waist bone in the skeleton
-        possibleAnims,                      // Animations found in our file
         mixer,                              // THREE.js animations mixer
         idle,                               // Idle, the default state our character returns to
-        clock = new THREE.Clock(),          // Used for anims, which run to a clock instead of frame rate 
-        currentlyAnimating = false,         // Used to check whether characters neck is being used in another anim
-        raycaster = new THREE.Raycaster();  // Used to detect the click on our character
+        clock = new THREE.Clock();          // Used for anims, which run to a clock instead of frame rate 
 
     // Init fuction
     // Here we init all variables & components
@@ -28,32 +28,27 @@
 
         // Canvas style
         const canvas = document.querySelector('#character-animation');
-        const backgroundColor = 0x0E141B;
 
         // ------------------------
         // Let's init ThreeJS scene
         // ------------------------
 
         scene = new THREE.Scene();
-        scene.background = new THREE.Color(backgroundColor);
 
-        // The fog will not be visible if the flor and the backround color are the same.
-        // If they're not then will help to better blend it together.
-        scene.fog = new THREE.Fog(backgroundColor, 60, 100);
+        // Make background transparent
+        scene.background = null;
 
         // -----------------
         // Init the renderer
         // -----------------
+        renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+        renderer.setClearColor( 0x000000, 0 );
 
-        renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
-        
         // Enable shadow casting
         renderer.shadowMap.enabled = true;
 
         // Render correctly on mobile devices
         renderer.setPixelRatio(window.devicePixelRatio);
-        
-        document.body.appendChild(renderer.domElement);
         
         // ------------------------
         // Setup perspective camera
@@ -61,7 +56,7 @@
 
         camera = new THREE.PerspectiveCamera(
             50,
-            window.innerWidth / window.innerHeight,
+            canvas.clientWidth / canvas.clientHeight,
             0.1,
             1000
         );
@@ -69,19 +64,6 @@
         camera.position.z =  30 
         camera.position.x =  0;
         camera.position.y = -3;
-
-        // -------------------
-        // Load model textures
-        // -------------------
-        // let stacy_txt = new THREE.TextureLoader().load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/stacy.jpg');
-
-        // stacy_txt.flipY = false; // we flip the texture so that its the right way up
-        
-        // const stacy_mtl = new THREE.MeshPhongMaterial({
-        //     map: stacy_txt,
-        //     color: 0xffffff,
-        //     skinning: true
-        // });
 
         // --------------------
         // Load character model
@@ -97,10 +79,9 @@
                 model = gltf.scene.children[0];
 
                 console.log(model);
-                // model.scale.set(7, 7, 7);
-                gltf.scene.scale.set( 7, 7, 7);            
-                gltf.scene.position.y = -11;            
-                // model.position.y = -11;
+
+                gltf.scene.scale.set( 7, 7, 7);   
+                gltf.scene.position.y = -11;
 
                 model.traverse(o => {
                     console.log(o.name);
@@ -117,29 +98,20 @@
                     }
                 });
                 
+                // Set metalic to 0 to correct darker texture
                 for (let i = 0; i <= 9; i++) {
                     model.children[i].material.metalness = 0;
                 }
 
+                // Add scene
                 scene.add(gltf.scene);
 
+                // Caracter idle animation
                 mixer = new THREE.AnimationMixer(model);
-                
-                let clips = fileAnimations.filter(val => val.name !== 'idle');
-
-                possibleAnims = clips.map(val => {
-                    let clip = THREE.AnimationClip.findByName(clips, val.name);
-            
-                    clip.tracks.splice(3, 3);
-                    clip.tracks.splice(9, 3);
-            
-                    clip = mixer.clipAction(clip);
-                    return clip;
-                });
 
                 let idleAnim = THREE.AnimationClip.findByName(fileAnimations, 'idle');
-                console.log(idleAnim);
 
+                // Make so that neck an spine can be overrited
                 idleAnim.tracks.splice(3, 3);
                 idleAnim.tracks.splice(9, 3);
 
@@ -163,7 +135,7 @@
         // Hemisphere light
         // The hemisphere light is just casting white light, and its intensity is at 0.61.
         // We also set its position 50 units above our center point
-        let hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.5);
+        let hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, .86);
         hemiLight.position.set(0, 50, 0);
         
         // Add hemisphere light to scene
@@ -172,7 +144,7 @@
         // Directional light
         // This enable sto cast a shadow
         let d = 8.25;
-        let dirLight = new THREE.DirectionalLight(0xffffff, 2.94);
+        let dirLight = new THREE.DirectionalLight(0xffffff, 1.94);
         dirLight.position.set(-8, 12, 8);
         dirLight.castShadow = true;
         dirLight.shadow.mapSize = new THREE.Vector2(1024, 1024);
@@ -187,23 +159,8 @@
         scene.add(dirLight);
 
         // ----------------
-        // Initialize floor
+        // TODO: Add a flor
         // ----------------
-
-        // Floor
-        let floorGeometry = new THREE.PlaneGeometry(5000, 5000, 1, 1);
-        let floorMaterial = new THREE.MeshBasicMaterial({
-            color: 0x0E141B
-        });
-
-        let floor = new THREE.Mesh(floorGeometry, floorMaterial);
-
-        floor.rotation.x = -0.5 * Math.PI; // This is 90 degrees by the way
-        floor.receiveShadow = true;
-        floor.position.y = -11;
-        
-        // Add the floors to scene
-        scene.add(floor);
 
         // Add a sphere
         let geometry = new THREE.SphereGeometry(8, 32, 32);
@@ -220,14 +177,11 @@
     // The update function is a crutial aspect of ThreeJS
     // Runs on every frame
     function update() {
+        // Resize event
+        resizeCanvasToDisplaySize();
+
         if (mixer) {
             mixer.update(clock.getDelta());
-        }
-
-        if (resizeRendererToDisplaySize(renderer)) {
-            const canvas = renderer.domElement;
-            camera.aspect = canvas.clientWidth / canvas.clientHeight;
-            camera.updateProjectionMatrix();
         }
 
         renderer.render(scene, camera);
@@ -237,73 +191,25 @@
     update();
     
     // The scene needs to be aware of resizes too so that it can keep everything in proportion.
-    function resizeRendererToDisplaySize(renderer) {
+    function resizeCanvasToDisplaySize() 
+    {
         const canvas = renderer.domElement;
-        let width = window.innerWidth;
-        let height = window.innerHeight;
-        let canvasPixelWidth = canvas.width / window.devicePixelRatio;
-        let canvasPixelHeight = canvas.height / window.devicePixelRatio;
-      
-        const needResize = canvasPixelWidth !== width || canvasPixelHeight !== height;
 
-        if (needResize) {
+        // Look up the size the canvas is being displayed
+        const width  = canvas.clientWidth;
+        const height = canvas.clientHeight;
+
+        // Adjust displayBuffer size to match
+        if (canvas.width !== width || canvas.height !== height) {
+            // You must pass false here or three.js sadly fights the browser
             renderer.setSize(width, height, false);
-        }
-        
-        return needResize;
-    }
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
 
-    window.addEventListener('click', e => raycast(e));
-    window.addEventListener('touchend', e => raycast(e, true));
-  
-    function raycast(e, touch = false) {
-        var mouse = {};
-
-        if (touch) {
-            mouse.x = 2 * (e.changedTouches[0].clientX / window.innerWidth) - 1;
-            mouse.y = 1 - 2 * (e.changedTouches[0].clientY / window.innerHeight);
-        } else {
-            mouse.x = 2 * (e.clientX / window.innerWidth) - 1;
-            mouse.y = 1 - 2 * (e.clientY / window.innerHeight);
-        }
-
-        // update the picking ray with the camera and mouse position
-        raycaster.setFromCamera(mouse, camera);
-
-        // calculate objects intersecting the picking ray
-        var intersects = raycaster.intersectObjects(scene.children, true);
-
-        if (intersects[0]) {
-            var object = intersects[0].object;
-            console.log(object.name);
-            if (object.name === 'Wolf3D_Body' || object.name === 'Wolf3D_Outfit_Bottom' || object.name === 'Wolf3D_Glasses' || object.name === 'Wolf3D_Hair' || object.name === 'Wolf3D_Head' || object.name === 'Wolf3D_Outfit_Bottom' || object.name === 'Wolf3D_Outfit_Footwear' || object.name === 'Wolf3D_Outfit_Top') {
-                if (!currentlyAnimating) {
-                    currentlyAnimating = true;
-                    playOnClick();
-                }
-            }
+            // Update any render target sizes here
         }
     }
   
-    // Get a random animation, and play it 
-    function playOnClick() {
-        let anim = Math.floor(Math.random() * possibleAnims.length) + 0;
-        playModifierAnimation(idle, 0.25, possibleAnims[anim], 0.25);
-    }
-  
-  
-    function playModifierAnimation(from, fSpeed, to, tSpeed) {
-        to.setLoop(THREE.LoopOnce);
-        to.reset();
-        to.play();
-        from.crossFadeTo(to, fSpeed, true);
-        setTimeout(function () {
-            from.enabled = true;
-            to.crossFadeTo(from, tSpeed, true);
-            currentlyAnimating = false;
-        }, to._clip.duration * 1000 - (tSpeed + fSpeed) * 1000);
-    }
-
     document.addEventListener('mousemove', function (e) {
         var mousecoords = getMousePos(e);
         if (neck && waist) {
