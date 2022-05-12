@@ -1,3 +1,6 @@
+{{/*  Tutorial for nested sections  */}}
+{{/*  https://stackoverflow.com/questions/69634076/nested-list-of-sections-and-content-hugo  */}}
+{{ if (eq .Title "Blog") }}
 <div class="main-wrapper blog">
     <div>
         <aside class="sidebar">
@@ -20,3 +23,22 @@
         </aside>
     </div>
 </div>
+{{ else if (eq .Title "Posts")}}
+    {{/*  
+        <div class="main-wrapper layout-uderconstruction">
+            {{ range .Sections.ByTitle }}
+                <li>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    {{ partial "helper/recursive.html" . }}
+                </li>
+            {{ end }}
+        </div>
+    */}}
+    <div class="main-wrapper layout-uderconstruction">
+        {{ partial "components/underConstruction.html" }}
+    </div>
+{{ else }}
+    <div class="main-wrapper layout-uderconstruction">
+        {{ partial "components/underConstruction.html" }}
+    </div>
+{{ end }}
