@@ -8,10 +8,15 @@ $hint-colors:
 // {{< hint >}}
 .book-hint 
 {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
     @each $name, $color in $hint-colors 
     {
         &.#{$name} 
         {
+            border-left: 5px solid;
             border-color: $color;
             background-color: rgba($color, 0.1);
         }

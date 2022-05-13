@@ -8,25 +8,18 @@ description: "Sample article showcasing basic Markdown syntax and formatting for
 author: "Vasile Câmpeanu"
 ---
 
-## Example
-
-{{< hint info >}}
-**Markdown content**  
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-{{< /hint >}}
-
-{{< hint warning >}}
-**Markdown content**  
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-{{< /hint >}}
+# Disclaimers
 
 {{< hint danger >}}
-**Markdown content**  
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+**Disclaimer 1**  
+Hello, just take in mind that this is still a work in progress, and a lot of optimizations and features need to pe added. This is more of a test than anything else.
 {{< /hint >}}
+
+{{< hint info >}}
+**Disclaimer 2**  
+Also, my english is not too good, so take that in mind too before judging me, thanks for understanding.
+{{< /hint >}}
+
 
 # Introduction
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
@@ -174,3 +167,23 @@ There are a multitude of ways to include codebloack in hugo
 - Dairy
     - Milk
     - Cheese
+
+# Hints
+
+{{< hint info >}}
+**Markdown content**  
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+{{< /hint >}}
+
+{{< hint warning >}}
+**Markdown content**  
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+{{< /hint >}}
+
+{{< hint danger >}}
+**Markdown content**  
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+{{< /hint >}}
