@@ -4,6 +4,8 @@ body
     background-color: var(--background-primary);
     font-family: var(--default-font);
     color: var(--text-normal);
+    // Norma font weight in safary
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 html
