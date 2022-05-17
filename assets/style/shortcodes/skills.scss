@@ -1,0 +1,100 @@
+.line-numbers
+{
+    width: 100%;
+}
+
+.skills-container 
+{
+    width: 100%;
+    margin: 0 auto;
+}
+
+@keyframes load 
+{
+    from 
+    {
+        width: 0%;
+    }
+}
+
+@-webkit-keyframes load 
+{
+    from 
+    {
+        width: 0%;
+    }
+}
+
+@-moz-keyframes load 
+{
+    from 
+    {
+        width: 0%;
+    }
+}
+
+@-o-keyframes load 
+{
+    from {
+        width: 0%;
+    }
+}
+
+.bar 
+{
+    background-color: #fff;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.bar::before 
+{
+    content: attr(data-skill);
+    background-color: #FF0878;
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+}
+
+.bar.front::before 
+{
+    background-color: var(--text-accent);
+}
+
+.bar.back::before 
+{
+    background-color: var(--text-accent-hover);
+}
+
+.bar.learning::before 
+{
+    width: calc(20% - 10px);
+}
+
+.bar.basic::before 
+{
+    width: calc(40% - 10px);
+}
+
+.bar.intermediate::before 
+{
+    width: calc(60% - 10px);
+}
+
+.bar.advanced::before 
+{
+    width: calc(80% - 10px);
+}
+
+.bar.expert::before 
+{
+    width: calc(100% - 10px);
+}
