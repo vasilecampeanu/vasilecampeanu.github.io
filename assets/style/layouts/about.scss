@@ -22,7 +22,8 @@
             border: 2px solid var(--border-color);
             border-radius: 5px;
             margin-bottom: 20px;
-
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            
             .icon 
             {
                 color: #ff0878;
@@ -123,6 +124,7 @@
             border: 2px solid var(--border-color);
             border-radius: 5px;
             margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
             .icon 
             {
@@ -145,6 +147,7 @@
             border: 2px solid var(--border-color);
             border-radius: 5px;
             margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
             .icon 
             {
@@ -179,7 +182,7 @@
                     margin: auto;
                     margin-left: 13px;
                     // min-height: 50px;
-                    border-left: 1px dashed #fff;
+                    border-left: 1px dashed var(--identation-guides);
                     padding: 0 0 25px 30px;
                     position: relative;
                 }
@@ -205,7 +208,7 @@
                     left: -13px;
                     top: -5px;
                     content: " ";
-                    border: 8px solid rgba(255, 255, 255, 1);
+                    border: 8px solid var(--circle-color);
                     border-radius: 500%;
                     background: var(--text-accent);
                     height: 25px;

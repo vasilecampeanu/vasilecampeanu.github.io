@@ -160,6 +160,155 @@ $md_min_width: 48rem;
 
             border: 2px solid var(--border-color);
         }
+
+        h1 
+        {
+            padding: 40px 0 32px;
+            font-size: 40px;
+        }
+        
+        h2 
+        {
+            padding: 32px 0 24px;
+            font-size: 32px;
+        }
+        
+        h3 
+        {
+            font-size: 24px;
+        }
+        
+        h4 
+        {
+            font-size: 18px;
+        }
+    
+        h5 
+        {
+            font-size: 16px;
+        }
+    
+        h6 
+        {
+            font-size: 14px;
+        }
+    
+        h3, h4, h5, h6 
+        {
+            padding: 24px 0 16px;
+        }
+
+        h1:hover .anchor,
+        h2:hover .anchor,
+        h3:hover .anchor,
+        h4:hover .anchor,
+        h5:hover .anchor,
+        h6:hover .anchor 
+        {
+            display: inline-flex;
+            color: var(--text-normal);
+            margin-inline-start: 8px;
+            font-weight: 500;
+            user-select: none;
+            font-size: .75em;
+        }
+
+        dl, ol, p, figure, ul 
+        {
+            padding-bottom: var(--content-gap);
+        }
+
+        // Lists
+        // Rebuild number lists
+        ol 
+        {
+            list-style: none;
+            counter-reset: li;
+
+            li 
+            {
+                counter-increment: li;
+                
+                &::before
+                {
+                    content: counter(li) ".";
+                    display: inline-block;
+                    padding-right: 2.5px;
+                    letter-spacing: -2.5px;
+                }
+            }
+        }
+
+        // Reset number list aligment
+        ul 
+        {
+            padding-inline-start: 20px;
+            
+            li
+            {
+                display: flexbox;
+                
+                .highlight
+                {
+                    justify-self: start;
+                    margin-top: 20px;
+                    width: 100% !important;
+                    margin: 10px 0px !important;
+                }
+
+                p
+                {
+                    padding: 0px;
+                }
+            }
+        }
+        
+        hr
+        {
+            margin: 20px 0px;
+            border: 1px solid var(--border-color);
+        }
+
+        // Tables
+        table 
+        {
+            justify-self: start;
+            margin-bottom: 32px;
+            overflow-x: scroll;
+
+            th,
+            &:not(.highlighttable, .highlight table, .gist .highlight) td 
+            {
+                min-width: 80px;
+                padding: 12px 8px;
+                line-height: 1.5;
+                border-bottom: 1px solid var(--border-color);
+            }
+    
+            th 
+            {
+                font-size: 14px;
+                text-align: start;
+            }
+    
+            &:not(.highlighttable) td code:only-child 
+            {
+                margin: auto 0;
+            }
+        }
+
+        // Link style
+        a
+        {
+            color: var(--text-accent);
+            transition: all var(--hover-transition);
+            font-weight: bold;
+
+            &:hover
+            {
+                color: var(--text-accent-hover);
+            }
+        }
     }
 
     .balloon-dot 

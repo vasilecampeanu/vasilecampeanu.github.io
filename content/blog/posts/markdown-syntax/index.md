@@ -1,7 +1,7 @@
 ---
 title: "Markdown Syntax"
 aliases: ["/hello-world"]
-categories: ["Test"]
+categories: ["test"]
 tags: ["markdown"]
 summary: "First article post. Here I test the markdown syntax."
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
@@ -11,8 +11,8 @@ author: "Vasile Câmpeanu"
 # Disclaimers
 
 {{< hint danger >}}
-**Disclaimer 1**  
-Hello, just take in mind that this is still a work in progress, and a lot of optimizations and features need to pe added. This is more of a test than anything else.
+**Disclaimer 1**
+Hello, just take in mind that this is still a work in progress, and a lot of optimizations and features need to be added. This is more of a test than anything else.
 {{< /hint >}}
 
 {{< hint info >}}
