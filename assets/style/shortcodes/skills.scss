@@ -42,7 +42,7 @@
 
 .bar 
 {
-    background-color: #fff;
+    background-color: #eee;
     padding: 2px;
     border-radius: 5px;
     margin: 10px 0px;
@@ -76,25 +76,25 @@
 
 .bar.learning::before 
 {
-    width: calc(20% - 10px);
+    width: calc(20%);
 }
 
 .bar.basic::before 
 {
-    width: calc(40% - 10px);
+    width: calc(40%);
 }
 
 .bar.intermediate::before 
 {
-    width: calc(60% - 10px);
+    width: calc(60%);
 }
 
 .bar.advanced::before 
 {
-    width: calc(80% - 10px);
+    width: calc(80%);
 }
 
 .bar.expert::before 
 {
-    width: calc(100% - 10px);
+    width: calc(100%);
 }
