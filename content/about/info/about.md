@@ -4,7 +4,7 @@ weight: 6
 ---
 
 #### Objectives
-The main objective of this site is to build a voice on the internet and to improve my communication skills.
+The main objective of this site is to build a voice on the internet and to improve my communication skills. I think that writting is no different from thinking.
 
 ---
 
