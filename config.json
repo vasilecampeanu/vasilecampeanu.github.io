@@ -2,16 +2,42 @@
     "baseURL": "http://www.vasilecampeanu.com/",
     "languageCode": "en-us",
     "title": "Vasile Câmpeanu's Porfolio & Blog",
+    "theme": "magnum-opus",
     "defaultContentLanguage": "en",
-    "paginate": 5,
+    "enableGitInfo": true,
+    "frontmatter": 
+    {
+        "date": 
+        [
+            "date",
+            "publishDate",
+            "lastmod"
+        ],
+        "expiryDate": 
+        [
+            "expiryDate"
+        ],
+        "lastmod": 
+        [
+            "lastmod",
+            ":git",
+            "date",
+            "publishDate"
+        ],
+        "publishDate": 
+        [
+            "publishDate",
+            "date"
+        ]
+    },
     "languages":
     {
-        "en": 
+        "en":
         {
             "languageName": "English",
             "languageIcon": null,
             "weight": 1,
-            "menu": 
+            "menu":
             {
                 "main":
                 [
@@ -26,33 +52,13 @@
                         }
                     },
                     {
-                        "identifier": "about",
-                        "name": "About",
-                        "url": "/about/",
-                        "weight": 2,
-                        "params": 
-                        {
-                            "icon": "user"
-                        }
-                    },
-                    {
                         "identifier": "blog",
                         "name": "Blog",
                         "url": "/blog/",
-                        "weight": 3,
+                        "weight": 2,
                         "params": 
                         {
                             "icon": "package"
-                        }
-                    },
-                    {
-                        "identifier": "news",
-                        "name": "News",
-                        "url": "/news/",
-                        "weight": 5,
-                        "params": 
-                        {
-                            "icon": "mail"
                         }
                     }
                 ]
@@ -63,13 +69,13 @@
             "languageName": "Romanian",
             "languageIcon": null,
             "weight": 2,
-            "menu": 
+            "menu":
             {
                 "main":
                 [
                     {
                         "identifier": "home",
-                        "name": "Acasa",
+                        "name": "Acasă",
                         "url": "/",
                         "weight": 1,
                         "params":
@@ -78,33 +84,13 @@
                         }
                     },
                     {
-                        "identifier": "about",
-                        "name": "Despre",
-                        "url": "/about/",
-                        "weight": 2,
-                        "params": 
-                        {
-                            "icon": "user"
-                        }
-                    },
-                    {
                         "identifier": "blog",
                         "name": "Blog",
                         "url": "/blog/",
-                        "weight": 3,
+                        "weight": 2,
                         "params": 
                         {
                             "icon": "package"
-                        }
-                    },
-                    {
-                        "identifier": "news",
-                        "name": "Noutati",
-                        "url": "/news/",
-                        "weight": 5,
-                        "params": 
-                        {
-                            "icon": "mail"
                         }
                     }
                 ]
@@ -114,75 +100,57 @@
     "params":
     {
         "posts": "blog/posts/",
-        "showBreadCrumbs": true,
-        "defaultImage": null,
+        "dateFormat": "02 Jan 2006",
         "article": 
         {
-            "readingTime": true
+            "readingTime": true,
+            "showBreadCrumbs": true,
+            "dateInfo": true,
+            "translations": true,
+            "share": true,
+            "categories": true,
+            "tags": true
         },
-        "widgets":
+        "socialMedia":
         {
-            "homepage":
+            "general":
             [
                 {
-                    "type": "categories",
-                    "params": 
-                    {
-                        "limit": 10
-                    }
+                    "name": "Instagram",
+                    "url": "https://www.instagram.com/vasilecampeanudotcom/",
+                    "icon": "instagram"
                 },
                 {
-                    "type": "tags",
-                    "params":
-                    {
-                        "limit": 10
-                    }
-                },
-                {
-                    "type": "popular",
-                    "params":
-                    {
-                        "limit": 10
-                    }
-                }
-            ],
-            "blogpage-left":
-            [
-                {
-                    "type": "popular",
-                    "params": 
-                    {
-                        "limit": 10
-                    }
-                }
-            ],
-            "blogpage-right":
-            [
-                {
-                    "type": "categories",
-                    "params": 
-                    {
-                        "limit": 10
-                    }
-                },
-                {
-                    "type": "tags",
-                    "params":
-                    {
-                        "limit": 10
-                    }
+                    "name": "GitHub",
+                    "url": "https://github.com/vasilecampeanu/",
+                    "icon": "github"
                 }
             ]
         }
     },
     "markup": 
     {
+        "goldmark": 
+        {
+            "renderer": 
+            {
+                "unsafe": true
+            }
+        },
         "highlight": 
         {
+            "anchorLineNos": false,
             "codeFences": true,
+            "guessSyntax": false,
+            "hl_Lines": "",
+            "hl_inline": false,
+            "lineAnchors": "",
+            "lineNoStart": 1,
+            "lineNos": false,
+            "lineNumbersInTable": true,
             "noClasses": false,
-            "pygmentsUseClasses" : true,
-            "pygmentsCodefences": true
+            "noHl": false,
+            "tabWidth": 4
         }
     }
 }

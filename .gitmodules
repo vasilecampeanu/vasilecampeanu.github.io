@@ -1,0 +1,3 @@
+[submodule "themes/magnum-opus"]
+	path = themes/magnum-opus
+	url = https://github.com/vasilecampeanu/magnum-opus.git
