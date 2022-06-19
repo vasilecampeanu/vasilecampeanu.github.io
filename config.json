@@ -1,7 +1,7 @@
 {
     "baseURL": "http://www.vasilecampeanu.com/",
     "languageCode": "en-us",
-    "title": "Vasile Câmpeanu's Porfolio & Blog",
+    "title": "Vasile Câmpeanu",
     "theme": "magnum-opus",
     "defaultContentLanguage": "en",
     "enableGitInfo": true,
@@ -99,6 +99,13 @@
     },
     "params":
     {
+        "logo":
+        {
+            "firstName": "Vasile",
+            "firstNameFL": "V",
+            "lastName": "Câmpeanu",
+            "lastNameFL": "C"
+        },
         "posts": "blog/posts/",
         "dateFormat": "02 Jan 2006",
         "article": 
