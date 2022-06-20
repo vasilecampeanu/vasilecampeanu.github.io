@@ -73,4 +73,4 @@ You should get something similar:
 {{< react-quickstart >}}
 
 # Deployment
-When you’re ready to deploy to production, running **npm run build** will create an optimized build of your app in the build folder. You can learn more about Create React App from its README and the User Guide.
+When you’re ready to deploy to production, running **npm run build** will create an optimized build of your app in the build folder. You can learn more about **Create React App** from its README and the **User Guide**.
