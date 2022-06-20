@@ -1,0 +1,1 @@
+hugo new blog/inbox/untitled.md
