@@ -1,0 +1,26 @@
+<script src="{{ "plugins/p5.min.js" | relURL }}"></script>
+
+{{/*  Instance container: https://p5js.org/examples/instance-mode-instance-container.html  */}}
+{{/*  p5.js Instance mode: https://github.com/processing/p5.js/wiki/p5.js-overview#instantiation--namespace  */}}
+
+<div id="processing">
+</div>
+
+<script>
+    const sketch = (p) => {
+        let x = 100;
+        let y = 100;
+        
+        p.setup = function() {
+            p.createCanvas(700, 410);
+        }
+
+        p.draw = function() {
+            p.background(0);
+            p.fill(255);
+            p.rect(x, y, 50, 50);
+        }
+    };
+
+    new p5(sketch, window.document.getElementById('processing'));
+</script>
