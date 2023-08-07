@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import StarsCanvas from "./StarsCanvas";
+import Navbar from "./Navbar";
 
 interface HeaderProps {
     hideSeparator?: boolean
@@ -13,6 +14,7 @@ const Header: FC<HeaderProps> = ({ hideSeparator }) => {
                 <div className="header-inner-wrapper">
                     <div className="separator"></div>
                     <div className="navbar-wrapper">
+                        <Navbar />
                     </div>
                     {hideSeparator ? (
                         <div className="post-header">

@@ -19,6 +19,36 @@ header.page-header
 
             top: 0;
             z-index: 1;
+
+            .navbar
+            {
+                justify-self: center;
+                
+                width: 100%;
+                max-width: var(--max-width);
+                padding: 10px var(--page-padding);
+    
+                display: grid;
+    
+                .logo
+                {
+                    align-self: center;
+        
+                    a
+                    {
+                        text-decoration: none;
+                        color: var(--text-normal);
+                        font-size: var(--font-size-logo);
+                        font-weight: 500;
+                        letter-spacing: 2px;
+            
+                        span
+                        {
+                            color: var(--logo-spam-color);
+                        }
+                    }
+                }
+            }
         }
 
         .svg-divider
