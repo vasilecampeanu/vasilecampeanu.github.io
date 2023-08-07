@@ -9,6 +9,7 @@ interface HeaderProps {
 const Header: FC<HeaderProps> = ({ hideSeparator }) => {
     return (
         <header className="page-header">
+            <StarsCanvas />
         </header>
     )
 }

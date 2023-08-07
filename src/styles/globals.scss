@@ -1,3 +1,9 @@
 @import "./core/normalize.scss";
 @import "./core/variables.scss";
 @import "./core/general.scss";
+
+// Components
+// Layout
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/layout.scss";

@@ -18,6 +18,9 @@
         "typescript": "5.1.6"
     },
     "devDependencies": {
-        "sass": "^1.64.2"
+        "sass": "^1.64.2",
+        "@react-three/drei": "^9.79.4",
+        "@react-three/fiber": "^8.13.6",
+        "three": "^0.154.0"
     }
 }
