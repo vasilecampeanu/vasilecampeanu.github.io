@@ -1,0 +1,73 @@
+
+// Themes
+// Dark theme
+:root
+{
+    // Next.js
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+
+    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+    --secondary-glow: linear-gradient(to bottom right,rgba(1, 65, 255, 0),rgba(1, 65, 255, 0),rgba(1, 65, 255, 0.3));
+
+    --tile-start-rgb: 2, 13, 46;
+    --tile-end-rgb: 2, 5, 19;
+    --tile-border: conic-gradient(#ffffff80,#ffffff40,#ffffff30,#ffffff20,#ffffff10,#ffffff10,#ffffff80);
+
+    --callout-rgb: 20, 20, 20;
+    --callout-border-rgb: 108, 108, 108;
+    --card-rgb: 100, 100, 100;
+    --card-border-rgb: 200, 200, 200;
+
+    // Custom
+    --background-primary: #0E141A;
+    --background-secondary: #13181F;
+
+    --text-normal: #ffffff;
+    --text-accent: #4C6EF5;
+    --text-hover:  #F5D34C;
+
+    --logo-spam-color: #4C6EF5;
+
+    --color-homepage-dark:  hsla(202, 7%, 77%, 0.1);
+    --color-homepage-light: hsla(200, 4%, 71%, 0);
+    
+    --title-section: #FF0878;
+}
+
+// Sizes
+:root
+{
+    --max-width: 1280px;
+    --page-padding: 32px;
+    --border-radius: 12px;
+}
+
+// Typography
+:root
+{    
+    // Default font
+    --default-font: "Wotfard";
+    --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+    // Font sizes
+    --font-size-xxs: 10px; /* Extra extra small */
+    --font-size-xs:  12px; /* Extra small */
+    --font-size-sm:  14px; /* Small */
+    --font-size-md:  16px; /* Medium */
+    --font-size-lg:  18px; /* Large */
+    --font-size-xl:  22px; /* Extra Large */
+    --font-size-xxl: 26px; /* Extra Extra Large */
+
+    // Headings
+    --font-size-h1: 36px; /* H1 Size */
+    --font-size-h2: 30px; /* H2 Size */
+    --font-size-h3: 24px; /* H3 Size */
+    --font-size-h4: 20px; /* H4 Size */
+    --font-size-h5: 18px; /* H5 Size */
+    --font-size-h6: 16px; /* H6 Size */
+
+    // Logo
+    --font-size-logo: 22px;
+}
