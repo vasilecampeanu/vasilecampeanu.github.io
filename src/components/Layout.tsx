@@ -13,8 +13,12 @@ const Layout: FC<LayoutProps> = ({ children, className, hideSeparator }) => {
     return (
         <div className={className ? `page-layout ${className}` : 'page-layout'}>
             <Header hideSeparator={hideSeparator} />
-            <main>{children}</main>
-            <Footer/>
+            <main>
+                <div className="main-inner-wrapper">
+                    {children}
+                </div>
+            </main>
+            <Footer />
         </div>
     )
 }

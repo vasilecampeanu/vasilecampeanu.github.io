@@ -1,45 +1,53 @@
 header.page-header
 {
-    height: 400px;
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    background: linear-gradient(0deg, var(--color-homepage-dark), var(--color-homepage-light));
-
-    .separator
-    {
-        height: 50px;
-    }
-
     .header-inner-wrapper
     {
-    }
-
-    .svg-divider
-    {
-        width: 100%;
-        line-height: 0;
-        transform: rotate(180deg);
-        position: relative;
-        z-index: 2;
-        overflow: hidden;
-    }
-
-    .svg-divider svg 
-    {
-        display: block;
-        position: relative;
-        width: calc(140% + 1.3px);
-        height: 100px;
-        transition: height 0.3s ease;
-
-        @media (max-width: 768px) {
-            height: 65px;
+        height: 400px;
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        background: linear-gradient(0deg, var(--color-homepage-dark), var(--color-homepage-light));
+    
+        .separator
+        {
+            height: 50px;
         }
-    }
+        
+        .navbar-wrapper
+        {
+            display: grid;
+            position: sticky;
 
-    .svg-divider .shape-fill 
-    {
-        fill: #000;
+            top: 0;
+            z-index: 1;
+        }
+
+        .svg-divider
+        {
+            width: 100%;
+            line-height: 0;
+            transform: rotate(180deg);
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+        }
+    
+        .svg-divider svg 
+        {
+            display: block;
+            position: relative;
+            width: calc(140% + 1.3px);
+            height: 100px;
+            transition: height 0.3s ease;
+    
+            @media (max-width: 768px) {
+                height: 65px;
+            }
+        }
+    
+        .svg-divider .shape-fill 
+        {
+            fill: var(--background-primary);
+        }
     }
 }
 

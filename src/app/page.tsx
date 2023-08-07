@@ -4,7 +4,7 @@ interface HomeProps { }
 
 const Home: FC<HomeProps> = () => {
     return (
-        <></>
+        <>Hello world!</>
     )
 }
 

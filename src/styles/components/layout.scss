@@ -5,13 +5,12 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
 
-
     main
     {
         display: grid;
         z-index: 2;
 
-        background-color: #000;
+        background-color: var(--background-primary);
 
         .main-inner-wrapper
         {

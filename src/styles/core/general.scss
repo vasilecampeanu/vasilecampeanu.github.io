@@ -1,5 +1,6 @@
 body 
 {
     color: rgb(var(--foreground-rgb));
-    background-color: black;
+    background-color: var(--background-primary);
+    font-family: var(--font-mono);
 }

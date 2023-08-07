@@ -1,0 +1,14 @@
+.page-footer
+{
+    display: grid;
+    z-index: 2;
+    background-color: var(--background-primary);
+
+    .footer-inner-wrapper
+    {
+        justify-self: center;
+        width: 100%;
+        max-width: var(--max-width);
+        padding: var(--page-padding);
+    }
+}
