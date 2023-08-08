@@ -1,11 +1,15 @@
-import RecentlyPublished from '@/components/RecentlyPublished'
+import RecentlyPublished from '@/components/features/RecentlyPublished'
 import { FC } from 'react'
+
+import Layout from '@/components/layout/Layout'
 
 interface HomeProps { }
 
 const Home: FC<HomeProps> = () => {
     return (
-        <RecentlyPublished />
+        <Layout>
+            <RecentlyPublished />
+        </Layout>
     )
 }
 
