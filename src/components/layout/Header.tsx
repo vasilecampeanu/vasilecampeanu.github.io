@@ -1,13 +1,15 @@
 import { FC } from "react";
+import { Post } from "contentlayer/generated"
 
 import StarsCanvas from "../common/StarsCanvas";
 import Navbar from "./Navbar";
 
 interface HeaderProps {
     hideSeparator?: boolean
+    post?: Post | undefined
 }
 
-const Header: FC<HeaderProps> = ({ hideSeparator }) => {
+const Header: FC<HeaderProps> = ({ hideSeparator, post }) => {
     return (
         <>
             <header className="page-header">
@@ -18,6 +20,7 @@ const Header: FC<HeaderProps> = ({ hideSeparator }) => {
                     </div>
                     {hideSeparator ? (
                         <div className="post-header">
+                            <h1>{post!.title}</h1>
                         </div>
                     ) : (
                         <div className="svg-divider">

@@ -3,9 +3,9 @@ import { FC } from 'react'
 import Layout from '../components/layout/Layout'
 import RecentlyPublished from '../components/features/RecentlyPublished'
 
-interface HomeProps { }
+interface HomePageProps { }
 
-const Home: FC<HomeProps> = () => {
+const HomePage: FC<HomePageProps> = () => {
     return (
         <Layout>
             <RecentlyPublished />
@@ -13,4 +13,4 @@ const Home: FC<HomeProps> = () => {
     )
 }
 
-export default Home
+export default HomePage

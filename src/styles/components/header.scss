@@ -29,11 +29,12 @@ header.page-header
                 padding: 10px var(--page-padding);
     
                 display: grid;
-    
+                grid-template-columns: auto 1fr;
+
                 .logo
                 {
                     align-self: center;
-        
+
                     a
                     {
                         text-decoration: none;
@@ -68,14 +69,39 @@ header.page-header
             height: 100px;
             transition: height 0.3s ease;
     
-            @media (max-width: 768px) {
-                height: 65px;
+            @media (max-width: 1024px) 
+            {
+                    height: 90px;
+            }
+
+            @media (max-width: 991px) 
+            {
+                    height: 80px;
+            }
+
+            @media (max-width: 767px) 
+            {
+                    height: 70px;
+            }
+
+            @media (max-width: 575px) 
+            {
+                    height: 60px;
             }
         }
     
         .svg-divider .shape-fill 
         {
             fill: var(--background-primary);
+        }
+
+        .post-header
+        {
+            justify-self: center;
+            align-self: end;
+            width: 100%;
+            max-width: var(--max-width);
+            padding: 0px var(--page-padding);
         }
     }
 }
