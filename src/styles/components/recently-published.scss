@@ -1,0 +1,13 @@
+.recently-published
+{
+    display: grid;
+    gap: 30px;
+
+    .section-title
+    {
+        text-transform: uppercase;
+        font-size: var(--font-size-md);
+        letter-spacing: 2px;
+        color: var(--title-section);
+    }
+}
