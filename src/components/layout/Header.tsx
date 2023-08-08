@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import StarsCanvas from "@/components/common/StarsCanvas";
+import StarsCanvas from "../common/StarsCanvas";
 import Navbar from "./Navbar";
 
 interface HeaderProps {

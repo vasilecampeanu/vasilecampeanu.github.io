@@ -19,6 +19,11 @@ export const Post = defineDocumentType(() => ({
     filePathPattern: `blog/**/*.mdx`,
     fields: 
     {
+        published: 
+        {
+            type: "boolean",
+            default: true,
+        },
         title: 
         { 
             type: 'string', 

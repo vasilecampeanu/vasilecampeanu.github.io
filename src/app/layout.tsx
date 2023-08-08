@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google'
 import { FC } from 'react'
 
-import '@/styles/globals.scss'
+import '../styles/globals.scss'
 
 interface RootLayoutProps {
     children: React.ReactNode

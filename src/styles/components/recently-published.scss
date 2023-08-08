@@ -11,4 +11,31 @@
         letter-spacing: 2px;
         color: var(--title-section);
     }
+
+    .post-list
+    {
+        display: grid;
+        gap: 15px;;
+
+        .post-preview
+        {
+            display: grid;
+            gap: 5px;
+
+            &:hover h3
+            {
+                color: var(--text-accent);
+            }
+
+            .read-more
+            {
+                font-weight: bold;
+
+                &:hover
+                {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
