@@ -3,24 +3,30 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev",
-        "build": "next build",
+        "dev": "concurrently \"contentlayer dev\" \"next dev\"",
+        "build": "contentlayer build && next build",
+        "turbo": "next dev --turbo",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "preview": "next build && next start"
     },
     "dependencies": {
         "@types/node": "20.4.8",
         "@types/react": "18.2.18",
         "@types/react-dom": "18.2.7",
+        "concurrently": "^8.2.0",
+        "contentlayer": "^0.3.4",
+        "date-fns": "^2.30.0",
         "next": "13.4.13",
+        "next-contentlayer": "^0.3.4",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "typescript": "5.1.6"
     },
     "devDependencies": {
-        "sass": "^1.64.2",
         "@react-three/drei": "^9.79.4",
         "@react-three/fiber": "^8.13.6",
+        "sass": "^1.64.2",
         "three": "^0.154.0"
     }
 }
