@@ -5,8 +5,7 @@ import { FC } from "react";
 import { allPosts } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
 
-interface RecentlyPublishedProps {
-}
+interface RecentlyPublishedProps {}
 
 const RecentlyPublished: FC<RecentlyPublishedProps> = ({ }) => {
     const posts = allPosts.filter((post: any) => post.published).sort((a, b) => {
@@ -18,7 +17,7 @@ const RecentlyPublished: FC<RecentlyPublishedProps> = ({ }) => {
             <h1 className="section-title">Recently Published</h1>
             <div className="post-list">
                 {posts.map((post, index) => (
-                    <Link 
+                    <Link
                         key={post._id}
                         href={post.slug} 
                         className="post-preview" 

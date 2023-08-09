@@ -4,6 +4,7 @@ import { Post, allPosts } from "contentlayer/generated"
 
 import Layout from '../../../components/layout/Layout'
 import RecentlyPublished from '../../../components/features/RecentlyPublished'
+import MdxWrapper from '@/src/components/features/MdxWrapper'
 
 interface PostPageProps {
     params: {
@@ -23,10 +24,11 @@ const getPostFromParams = async (params: { slug: any[] }) => {
 }
 
 const HomePage: FC<PostPageProps> = async ({ params }) => {
-    const post: Post | undefined = await getPostFromParams(params);
+    const post: any = await getPostFromParams(params);
 
     return (
         <Layout hideSeparator={true} post={post}>
+            <MdxWrapper code={post?.body.code} />
         </Layout>
     )
 }
