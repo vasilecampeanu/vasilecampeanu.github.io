@@ -102,6 +102,12 @@ header.page-header
             width: 100%;
             max-width: var(--max-width);
             padding: 0px var(--page-padding);
+            padding-bottom: 50px;
+
+            h1
+            {
+                font-size: var(--font-size-xxl)
+            }
         }
     }
 }

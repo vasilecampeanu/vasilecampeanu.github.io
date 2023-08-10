@@ -9,3 +9,15 @@
 @import "./components/layout.scss";
 
 @import "./components/recently-published.scss";
+
+pre
+{
+    white-space: pre;
+    overflow-x: auto;
+    
+    code
+    {
+        overflow-x: auto;
+        max-width: calc(100% + 64px);
+    }
+}

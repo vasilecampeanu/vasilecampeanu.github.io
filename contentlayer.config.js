@@ -5,6 +5,8 @@ import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
 
+import rehypePrettyCodeOptions from "./src/lib/RehypePrettyCode"
+
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
     slug:
@@ -58,34 +60,13 @@ export default makeSource({
         rehypePlugins: 
         [
             rehypeSlug,
-            [
-                rehypePrettyCode,
-                {
-                    theme: "github-dark",
-                    onVisitLine(node) 
-                    {
-                        // Prevent lines from collapsing in `display: grid` mode, and allow empty lines to be copy/pasted
-                        if (node.children.length === 0) {
-                            node.children = [{ type: "text", value: " " }]
-                        }
-                    },
-                    onVisitHighlightedLine(node) 
-                    {
-                        node.properties.className.push("line--highlighted")
-                    },
-                    onVisitHighlightedWord(node) 
-                    {
-                        node.properties.className = ["word--highlighted"]
-                    },
-                },
-            ],
+            [rehypePrettyCode, rehypePrettyCodeOptions],
             [
                 rehypeAutolinkHeadings,
                 {
                     properties: 
                     {
-                        className: ["subheading-anchor"],
-                        ariaLabel: "Link to section",
+                        className: ["anchor"]
                     },
                 },
             ],
