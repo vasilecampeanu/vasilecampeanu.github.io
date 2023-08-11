@@ -28,7 +28,11 @@ const HomePage: FC<PostPageProps> = async ({ params }) => {
 
     return (
         <Layout post={post} className="post" hideSeparator={true}>
-            <MdxWrapper code={post?.body.code} />
+            <div className="post-content">
+                <MdxWrapper code={post?.body.code} />
+            </div>
+            <div className="table-of-content">
+            </div>
         </Layout>
     )
 }
