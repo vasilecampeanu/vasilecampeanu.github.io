@@ -1,0 +1,35 @@
+main.post 
+{
+    .main-inner-wrapper
+    {
+        justify-self: center;
+        width: 100%;
+        max-width: var(--max-width-primary);
+        padding: 0px var(--page-padding);
+
+        ul, ol 
+        {
+            list-style-position: inside;
+        }
+
+        pre
+        {
+            width: var(--max-width-primary);
+            margin-left: -32px;
+            
+            white-space: pre;
+            overflow-x: auto;
+            
+            code
+            {
+                max-width: var(--max-width-primary);
+                overflow-x: auto;
+            }
+        }
+
+        p
+        {
+            margin: 10px 0px;
+        }
+    }
+}

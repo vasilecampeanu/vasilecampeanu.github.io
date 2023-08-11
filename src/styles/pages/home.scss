@@ -1,0 +1,10 @@
+main.home
+{
+    .main-inner-wrapper
+    {
+        justify-self: center;
+        width: 100%;
+        max-width: var(--max-width-primary);
+        padding: 0px var(--page-padding);
+    }
+}

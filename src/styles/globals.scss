@@ -10,14 +10,6 @@
 
 @import "./components/recently-published.scss";
 
-pre
-{
-    white-space: pre;
-    overflow-x: auto;
-    
-    code
-    {
-        overflow-x: auto;
-        max-width: calc(100% + 64px);
-    }
-}
+// Pages
+@import "./pages/home.scss";
+@import "./pages/post.scss";

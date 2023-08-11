@@ -27,7 +27,7 @@ const HomePage: FC<PostPageProps> = async ({ params }) => {
     const post: any = await getPostFromParams(params);
 
     return (
-        <Layout hideSeparator={true} post={post}>
+        <Layout post={post} className="post" hideSeparator={true}>
             <MdxWrapper code={post?.body.code} />
         </Layout>
     )

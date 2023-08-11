@@ -25,7 +25,7 @@ header.page-header
                 justify-self: center;
                 
                 width: 100%;
-                max-width: var(--max-width);
+                max-width: var(--max-width-primary);
                 padding: 10px var(--page-padding);
     
                 display: grid;
@@ -100,7 +100,7 @@ header.page-header
             justify-self: center;
             align-self: end;
             width: 100%;
-            max-width: var(--max-width);
+            max-width: var(--max-width-primary);
             padding: 0px var(--page-padding);
             padding-bottom: 50px;
 

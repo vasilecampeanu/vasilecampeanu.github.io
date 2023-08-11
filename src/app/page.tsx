@@ -7,7 +7,7 @@ interface HomePageProps { }
 
 const HomePage: FC<HomePageProps> = () => {
     return (
-        <Layout>
+        <Layout className="home">
             <RecentlyPublished />
         </Layout>
     )

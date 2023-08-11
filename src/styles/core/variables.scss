@@ -39,7 +39,7 @@
 // Sizes
 :root
 {
-    --max-width: 1199px;
+    --max-width-primary: 1199px;
     --page-padding: 32px;
     --border-radius: 12px;
 }
@@ -76,7 +76,7 @@
 {
     :root 
     {
-        --max-width: 800px;
+        --max-width-primary: 800px;
     }
 }
 
@@ -84,7 +84,7 @@
 {
     :root 
     {
-        --max-width: 600px;
+        --max-width-primary: 600px;
     }
 }
 
@@ -92,7 +92,7 @@
 {
     :root 
     {
-        --max-width: 100%;
+        --max-width-primary: 100vw;
         --page-padding: 16px
     }
 }
