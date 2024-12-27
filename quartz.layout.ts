@@ -10,7 +10,12 @@ export const sharedPageComponents: SharedLayout = {
     Component.Search(),
     Component.Darkmode(),
   ],
-  afterBody: [],
+  afterBody: [
+    Component.RecentNotes({
+      title: "Recent Writing",
+      limit: 4
+    }),
+  ],
   footer: Component.Footer({
     links: {
       GitHub:  "https://github.com/vasilecampeanu",
