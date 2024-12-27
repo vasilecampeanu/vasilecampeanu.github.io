@@ -154,6 +154,9 @@ export default (() => {
     const socialUrl =
       fileData.slug === "404" ? url.toString() : joinSegments(url.toString(), fileData.slug!)
 
+    // Custom font for poetry
+    const fontStylePath = joinSegments(baseDir, "static/font/font-style.css")
+
     return (
       <head>
         <title>{title}</title>
@@ -200,6 +203,7 @@ export default (() => {
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
+        <link href={fontStylePath} rel="stylesheet" type="text/css" spa-preserve />
       </head>
     )
   }
