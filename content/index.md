@@ -1,5 +1,7 @@
 ---
 title: "Starting, Just Because"
+tags:
+    - mindset
 ---
 
 ```poetry
@@ -8,7 +10,7 @@ Welcome!
 
 <img src="./banner.svg" />
 
-# I’m Vasile, and this is... something.
+# I’m Vasile Câmpeanu, and this is... something.
 
 > [!QUOTE]
 > “Every accomplishment starts with the decision to try.”
